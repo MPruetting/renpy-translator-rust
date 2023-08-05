@@ -1,0 +1,5 @@
+label alt_day0_start_d:
+    scene anim prolog_2
+    with dissolve2
+    "testbackslash", "testbackslash", "Мне снова снилось что-то.", "И я снова кричал во сне."
+    play music music_7dl["seven_summer_days"] fadein 3

@@ -1,0 +1,2 @@
+label alt_day0_start_d:
+    pause(.02)
