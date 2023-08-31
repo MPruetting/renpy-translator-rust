@@ -1,4 +1,4 @@
-use std::fs;
+use std::{collections::HashMap, fs};
 
 use super::cli;
 use color_eyre::eyre::Result;
@@ -38,6 +38,7 @@ const SPECIAL_CHARS_MAPPING: [SpecialCharsMapping; 7] = [
     },
 ];
 const TRANSLATION_URL_GOOGLE: &str = "https://translation.googleapis.com/language/translate/v2";
+const TRANSLATION_URL_DEEPL: &str = "https://api-free.deepl.com/v2/translate";
 
 #[derive(Debug)]
 struct TranslationPart {
@@ -85,8 +86,8 @@ pub async fn translate() -> Result<()> {
         println!("Keine Translation Strings In Datei gefunden, welche übersetzt werden können.");
         return Ok(());
     }
-    let translation_parts = translate_texts(translate_cli.api_key.as_str(), texts).await?;
-
+    
+    let translation_parts = translate_texts_deepl(translate_cli.api_key.as_str(), texts).await?;
     for part in translation_parts {
         file_content = file_content.replace(&part.orig_text, &part.to_translated_text_decoded());
     }
@@ -98,8 +99,11 @@ pub async fn translate() -> Result<()> {
     Ok(())
 }
 
-async fn translate_texts(api_key: &str, texts: Vec<TranslationPart>) -> Result<Vec<TranslationPart>> {
-    log::debug!("<<<Translating Found Text - Starting URL Requests>>>");
+async fn translate_texts(
+    api_key: &str,
+    texts: Vec<TranslationPart>,
+) -> Result<Vec<TranslationPart>> {
+    log::debug!("<<<Translating Found Text - Starting URL Requests GOOGLE>>>");
     let basic_url = format!(
         "{}?key={}&source=ru&target=de",
         TRANSLATION_URL_GOOGLE, api_key
@@ -127,7 +131,11 @@ async fn translate_texts(api_key: &str, texts: Vec<TranslationPart>) -> Result<V
     for response in responses {
         let res = response?;
         let url = res.url().clone();
-        let orig_text = url.query_pairs().find(|pair| pair.0 == "orig_text").unwrap().1;
+        let orig_text = url
+            .query_pairs()
+            .find(|pair| pair.0 == "orig_text")
+            .unwrap()
+            .1;
 
         let body = res.text().await?;
         let parsed: json::JsonValue = json::parse(body.trim()).unwrap();
@@ -136,6 +144,65 @@ async fn translate_texts(api_key: &str, texts: Vec<TranslationPart>) -> Result<V
         translation_parts.push(TranslationPart {
             orig_text: orig_text.clone().to_string(),
             translated_text: translated_text.members().last().unwrap()["translatedText"]
+                .as_str()
+                .unwrap()
+                .into(),
+        });
+    }
+    log::debug!("translated: {:?}", &translation_parts);
+    log::info!("Anzahl Translated Strings: {:?}", &translation_parts.len());
+
+    Ok(translation_parts)
+}
+
+async fn translate_texts_deepl(
+    api_key: &str,
+    texts: Vec<TranslationPart>,
+) -> Result<Vec<TranslationPart>> {
+    log::debug!("<<<Translating Found Text - Starting URL Requests DEEPL>>>");
+
+    let requests = texts
+        .iter()
+        .map(|t| {
+            let mut params = HashMap::new();
+            params.insert("text", t.orig_text.as_str());
+            params.insert("target_lang", "DE");
+
+            let url = Url::parse(TRANSLATION_URL_DEEPL)
+                .unwrap()
+                .query_pairs_mut()
+                .append_pair("orig_text", t.orig_text.as_str())
+                .finish()
+                .to_string();
+
+            reqwest::Client::new()
+                .post(url)
+                .form(&params)
+                .header("Authorization", String::from("DeepL-Auth-Key ") + api_key)
+                .send()
+        })
+        .collect_vec();
+
+    let responses = join_all(requests).await;
+
+    let mut translation_parts: Vec<TranslationPart> = vec![];
+    for response in responses {
+        let res = response?;
+        let url = res.url().clone();
+        let orig_text = url
+            .query_pairs()
+            .find(|pair| pair.0 == "orig_text")
+            .unwrap()
+            .1;
+
+        let body = res.text().await?;
+        
+        let parsed: json::JsonValue = json::parse(body.trim()).unwrap();
+        let translated_text = &parsed["translations"];
+
+        translation_parts.push(TranslationPart {
+            orig_text: orig_text.clone().to_string(),
+            translated_text: translated_text.members().last().unwrap()["text"]
                 .as_str()
                 .unwrap()
                 .into(),

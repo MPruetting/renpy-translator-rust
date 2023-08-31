@@ -1,6 +1,6 @@
 pub mod helpers;
 pub mod translation;
-
+pub mod parser;
 
 
 #[cfg(test)]
