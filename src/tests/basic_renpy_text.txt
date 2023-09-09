@@ -1,7 +1,2 @@
-label alt_day0_start_d:
-    "Мне снова \"снилось\" что-то."
-    'сн\'о\'ва'
-    "Мне снова снилось
-    что-то."
-    play music music_7dl["seven_summer_days"] fadein 3
-    "Мне снова = снилось что-то."
+
+        dreamgirl "Ты выспался? {w}То-то и оно."

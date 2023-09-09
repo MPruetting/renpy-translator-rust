@@ -7,35 +7,15 @@ use reqwest::Url;
 
 use futures::future::join_all;
 
-const SPECIAL_CHARS_MAPPING: [SpecialCharsMapping; 7] = [
+const SPECIAL_CHARS_MAPPING: [SpecialCharsMapping; 2] = [
     SpecialCharsMapping {
-        from: "\\",
-        to: "(11)`",
+        from: "{",
+        to: "<",
     },
     SpecialCharsMapping {
         from: "}",
-        to: "(22)",
-    },
-    SpecialCharsMapping {
-        from: "\"",
-        to: "(33)",
-    },
-    SpecialCharsMapping {
-        from: "=",
-        to: "(44)",
-    },
-    SpecialCharsMapping {
-        from: "%",
-        to: "(55)",
-    },
-    SpecialCharsMapping {
-        from: "/",
-        to: "(66)",
-    },
-    SpecialCharsMapping {
-        from: "#",
-        to: "(77)",
-    },
+        to: ">",
+    }
 ];
 const TRANSLATION_URL_GOOGLE: &str = "https://translation.googleapis.com/language/translate/v2";
 const TRANSLATION_URL_DEEPL: &str = "https://api-free.deepl.com/v2/translate";
@@ -165,8 +145,11 @@ async fn translate_texts_deepl(
         .iter()
         .map(|t| {
             let mut params = HashMap::new();
-            params.insert("text", t.orig_text.as_str());
+            let encoded_text = t.to_orig_text_encoded();
+            log::debug!("<<<Translating {encoded_text} ...>>>");
+            params.insert("text", encoded_text.as_str());
             params.insert("target_lang", "DE");
+            params.insert("tag_handling", "html");
 
             let url = Url::parse(TRANSLATION_URL_DEEPL)
                 .unwrap()

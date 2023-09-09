@@ -1,7 +1,500 @@
-label alt_day0_start_d:
-    "Ich habe wieder geträumt."
-    'sn\'o\'va'
-    "Ich habe wieder geträumt.
-    von etwas."
-    play music music_7dl["seven_summer_days"] fadein 3
-    "Ich habe wieder von etwas geträumt."
+label alt_day4_sl_7dl_begin:
+    "\"ask_you_out\""
+    scene bg int_house_of_mt_sunset with dissolve
+    play music music_7dl["ask_you_out"] fadein 3
+    play ambience ambience_int_cabin_day fadein 2
+    "Ich habe die ganze Nacht von etwas Gutem und Freundlichem geträumt, und so bin ich in bester Stimmung aufgewacht."
+    "Denn dieser freundliche und gute Mensch hatte immer die blauesten Augen und das freundlichste Lächeln."
+    "Aber ich konnte mich nicht an den Namen erinnern, so sehr ich mich auch bemühte."
+    "Und es ist mir einfach so von der Zunge gerollt, von der Zungenspitze gerollt, aber ich habe es nicht losgelassen."
+    "Und am Ende war ich so aufgeregt, dass ich, als ob ich eine Art Schatten durchbrechen würde, mit einem Ruck nach vorne stürzte und herausplatzte:"
+    me "Herrlichkeit!"
+    "Und wachte auf."
+    "Morgens, flüchtig, vergänglich, aber du lächelst dümmlich und fühlst dich wie der glücklichste Mensch aller Zeiten."
+    "Da ist sie."
+    show sl smile pioneer
+    show prologue_dream
+    with dissolve
+    sl "Guten Morgen."
+    "Und sie war so schön und gut, dass ich sie auch anlächelte:"
+    me "so wie ich dich in meinem Traum gesehen habe!"
+    show sl shy pioneer with dspr
+    sl "Ich hoffe, es war etwas Gutes?"
+    me "Sehr, sehr gut."
+    me "Du bist es! Wie kann da etwas Böses drin sein?"
+    sl "Du bringst das arme Mädchen in Verlegenheit."
+    show sl smile pioneer close with dissolve
+    "Sie beugte sich zu mir herüber und küsste mich auf die Stirn."
+    stop music fadeout 10
+    pause(1)
+    "Haben Sie es geglaubt?"
+    "Naiv."
+    with fade
+    pause(1)
+    if herc or loki:
+        hide prologue_dream
+        hide sl
+        with dissolve
+        "Nein, das Aufwachen war eigentlich ganz angenehm."
+        "Ich hörte die gurrende Stimme von jemandem, der unaufdringlich versuchte, mich wachzurütteln."
+        sl "Semjon... Komm schon, Semjon... Komm schon, wach auf."
+        me "Danke..."
+        "Ich lächelte und öffnete meine Augen."
+        show sl happy sport with dspr
+        sl "Bist du wach? Juhu!{w} Und jetzt lass uns laufen gehen!"
+        me "Joggen? {w}Ich gehe nirgendwo hin!"
+        me "Wie auch immer, ich gehe jetzt ins Bett!"
+        sl "Ernsthaft?"
+        me "Ich habe ein Recht darauf, lass mich schlafen!"
+        sl "Kommen Sie, es wird Ihnen gefallen!"
+        menu:
+            "Zur Hölle mit dir. Ich ziehe mich jetzt an":
+                play ambience ambience_forest_evening fadein 6
+                play music music_7dl["runaway"] fadein 3
+                play sound_loop sfx_run_forest
+                scene
+                $ renpy.show("bg ext_backdoor_sunset_7dl", at_list = [running], what = Dawn("bg ext_backdoor_sunset_7dl"))
+                with fade2
+                play sound sfx_7dl["breath"] fadein 0
+                scene
+                $ renpy.show("bg ext_backroad_day_7dl", at_list = [running], what = Dawn("bg ext_backroad_day_7dl"))
+                with fade2
+                "Ja, wenn ich morgens nur gurren und streicheln könnte, wäre ich der glücklichste Mann der Welt!"
+                "Vielleicht würde ich sogar glauben, dass die Menschen untereinander Brüder sind, dass alles wunderbar ist, und ganz allgemein!"
+                with fade
+                "Aber nein, wir haben beschlossen, Glory zu zeigen!"
+                dreamgirl "Holen Sie es heraus und zeigen Sie es!"
+                play sound sfx_7dl["breath"] fadein 0
+                scene
+                $ renpy.show("bg ext_lake_sunset_7dl", at_list = [running], what = Dawn("bg ext_lake_sunset_7dl"))
+                with fade2
+                "Wie auch immer, es ist nicht schwer vorherzusagen, wie es ausgegangen ist, da ich hier schwitze, oder?"
+                "Ich werfe einen wütenden Blick auf die in Shorts gekleideten Halbkugeln, die sich fünf Meter vor mir rhythmisch bewegen."
+                "Ein Blick, der keinerlei erotische Untertöne hat."
+                "Am liebsten würde ich ihnen jetzt ins Gesicht schlagen!"
+                "Als hätte sie mein Verlangen gespürt, verlangsamte Slavia ihr Tempo und lief neben mir her."
+                scene
+                $ renpy.show("bg ext_path_day", what = Dawn("bg ext_path_day"))
+                show sl smile sport
+                with dissolve
+                sl "Sie sehen, wie gut es sich anfühlt! Morgens aufzuwachen, sich zu strecken, während der Rest des Camps noch schläft, und nur du und deine Gedanken sind da!"
+                me "Ich würde mich lieber meinen Gedanken stellen, während ich auf der Seite liege."
+                "Schnaufend und schnaufend murmelte ich."
+                "Mein Herz klopfte wie wild in meiner Kehle, meine Augen waren längst schwarz geworden, und jetzt wollte ich irgendwo hinfallen und leise sterben."
+                "Leider war Slavia genau der gegenteiligen Meinung."
+                "Sie sprang um mich herum und schüttelte mich:"
+                show sl happy2 sport
+                with dspr
+                sl "Tu nicht so, als wärst du ein sterbender Schwan! {w}Ich kann sehen, dass es dir gefällt!"
+                th "Ich liebe es so sehr, ich kann es gar nicht glauben."
+                "Nein, wenn wir auf den Campingwegen nur gemütlich das Fett abschütteln würden, könnte ich mich nicht einmal darüber ärgern!"
+                "Das ist es aber nicht!"
+                "Slawja führte mich zu einem unbekannten "großen Kreis", der die Umgrenzung des Lagers mit dem Ufer einschloss, und rannte daran entlang, als würde sie von einem tollwütigen Hund gejagt werden."
+                "Nun, das hat mich zutiefst verärgert."
+                "Und ich bin kurz davor, mich zu empören!"
+                "Ja. Sobald ich wieder zu Atem gekommen bin."
+                sl "Was ist los mit dir? Hast du nicht genug Haferbrei gegessen?"
+                th "Ich habe seit heute Morgen überhaupt nichts mehr gegessen."
+                sl "Zweihundert Meter bis zum Ziel, los geht's!"
+                hide sl with dissolve
+                "Slavia nickte mir aufmunternd zu und raste in Richtung der von hier aus sichtbaren Lagermauer davon."
+                "Und da ich nicht für immer hier leben wollte, hatte ich keine andere Wahl, als ihr zu folgen."
+                me "Danke..."
+                "murmelte ich."
+                dreamgirl "Warten Sie einen Moment!"
+                $ alt_day4_sl_7dl_workout = True
+                $ lp_sl += 1
+                $ karma += 15
+                stop sound_loop
+                stop music fadeout 6
+                pause(1)
+            "Gibst du es auf?!":
+                stop music fadeout 6
+                show sl sad sport with dspr
+                "Glory seufzte und trat einen halben Schritt zurück."
+                sl "Ich dachte, du würdest es mögen, aber da du so ein Boo.... bist"
+                play sound sfx_close_door_1
+                scene bg int_house_of_mt_sunset
+                with fade2
+                "Ich war kein Freund des Fluchens, aber da ich mein Recht durchsetzen musste, nicht vor acht Uhr morgens aufzustehen....."
+                "Ich schaute auf meine Uhr und stöhnte - es waren genau fünfzehn Minuten bis zum Aufstehen."
+                th "Die Menschen haben überhaupt kein Gewissen!"
+                "Ich fiel in einen Schlummer."
+    else:
+        scene bg int_house_of_mt_sunset
+        with fade2
+        "Tatsächlich blieben die erotischen Träumereien mit einer goldhaarigen Frau ein Hirngespinst meiner entflammten Libido."
+        "Dabei wurde jedoch nicht viel Spielraum gelassen."
+        "Erst klingelte es irgendwo, dann rumpelte es, als ob jemand vom Bett auf den Boden gefallen wäre."
+        "Ein gedämpfter Schrei, das Rascheln hastig angezogener Kleidung."
+        "Und ich wurde ohne viel Zuneigung an der Schulter geschüttelt:"
+        mt "Raus aus den Federn, Semjon! Und deine Betreuerin rannte zur Flugstunde und betete unterwegs, dass sie nicht verprügelt wird, weil sie zu spät kam!"
+        play sound sfx_close_door_1
+    scene bg ext_washstand2_day
+    with joff_l
+    play music music_list["everyday_theme"] fadein 5
+    pause(1)
+    play sound sfx_open_water_sink
+    pause(1)
+    play sound_loop sfx_water_sink_stream
+    me "Aaaaaaaaaaaaah!" with vpunch
+    "Dasselbe, derselbe Ort."
+    "Es ist genau wie bei den alten Stücken."
+    "Nur gab es diesmal nicht eine einzige kleine Störquelle in der Nähe."
+    "Und keine öffentliche Aufregung, Kommissionen oder Inspektionen."
+    "Deshalb wird jede Dummheit heute bösartig sein."
+    th "Abgesehen von der Höhe der täglichen Dummheitsquote, versteht sich."
+    "Ich habe immer geglaubt, dass der Mensch eine genau festgelegte Anzahl von nutzlosen und lästigen Bewegungen pro Tag hat, die schädlich und ekelhaft sind - aber notwendig!"
+    "Denn wenn man nicht böswillig dumme Dinge tut, passieren sie einem, wann immer sie wollen!"
+    scene bg ext_washstand_day
+    with flash
+    if alt_day4_sl_7dl_workout:
+        dreamgirl "Sagen Sie mir, warum sind Sie Slawana zum Laufen gefolgt?"
+        dreamgirl "Schließlich sind ihre Bedürfnisse, nicht genug Schlaf zu bekommen, nur ihre Bedürfnisse!"
+        th "Wie kommst du darauf, dass sie nicht genug Schlaf bekommen hat? Geschwollene Augenlider oder so etwas in der Art?"
+        dreamgirl "Мда, беда… Был бы ты хотя бы внешне красивый, это тебя извинило бы. {w}Das ist es aber nicht!"
+        dreamgirl "Ihr seid zur gleichen Zeit zu euren Kojen gegangen und habt euch auf die gleiche Weise hingelegt."
+        dreamgirl "Konntest du schlafen? {w}Das ist es ja gerade."
+        dreamgirl "Ich hätte sie in eine Decke einwickeln und im Kleiderschrank verstecken sollen - und dann schlafen!"
+        th "Der alte Mazai ist in der Scheune unterwegs."
+        th "Geh wieder schlafen, warum bist du so?"
+        dreamgirl "Oh, natürlich! Du bleibst wach, schaust dir Pastorale in einem schwarzen Trainingsanzug an, und ich schlafe? {w}Ist der Mund von Pipita Huarto geschwollen?"
+    "Ich spritzte mir eine weitere Handvoll Eiswasser ins Gesicht."
+    "Mit einer Art masochistischer Befriedigung."
+    th "Und nicht genug Schlaf, und nicht genug Ruhe, und... Eh, hier ist noch etwas Eiswasser für dein Shivo... Oh!"
+    play sound sfx_close_water_sink
+    stop sound_loop
+    "Wie nicht anders zu erwarten, bahnten sich vereiste Wege ihren Weg."
+    scene bg ext_houses_sunset
+    with dissolve
+    "Wie ein Mantra wiederholte ich "kein Bastard wird mir den Morgen verderben" und kehrte nach Hause zurück."
+    scene bg ext_house_of_mt_sunset
+    with dissolve
+    "Und natürlich begegnete er gleich an der Schwelle seiner Hoffnung und Unterstützung, der freundlichsten und et cetera, et cetera...."
+    show mt smile sport
+    with dissolve
+    if alt_day4_sl_7dl_workout:
+        mt "Du überraschst mich heute! Bist du selbst früh aufgestanden?"
+        me "Du hältst zu viel von mir."
+    else:
+        me "Wie läuft's denn so?"
+        show mt surprise sport with dspr
+        mt "Ist es das?"
+        if dr:
+            me "Du kommst zu spät zum Fly-In."
+            "Ich habe ihn daran erinnert."
+            show mt smile sport with dspr
+            mt "Das ist schon in Ordnung. Außerdem wird niemand jemals davon erfahren."
+            mt "Ich meine,{w=.3} ist richtig{w=.2}oder?"
+            "Ich sah etwas Unheimliches in ihrem Lächeln."
+            "Daher auch das eilige Nicken."
+            mt "Ich verlasse mich auf Sie."
+        else:
+            me "Laune."
+            mt "Ich bin in der Stimmung, dich zum Training zu schicken!"
+    mt "Gib mir deine Seife und dein Wasser und geh raus auf den Platz und wärme dich auf."
+    "Zu diesem Zeitpunkt hatten sich meine Atmung und mein Herzschlag gerade erholt, und ich brauchte keine weiteren Aufwärmübungen mehr."
+    "Aber irgendetwas sagte mir, dass es besser war, jetzt nicht mit dem Berater zu streiten."
+    "Ob es die Verzweiflung in ihrem Blick war oder etwas anderes, ich nickte gehorsam, drückte ihr das Bündel in die Hand und machte mich über meine linke Schulter auf den Weg."
+    "Dorthin, wo die bereits aufgewärmte Slawja mit den Armen fuchtelt und ihr Becken bewegt, als hätte sie mich gerettet und würde nicht nobel spielen."
+    "Auf geht's zum Angriff!"
+    pause(1)
+    scene bg ext_square_sunset3_7dl
+    with dissolve
+    play ambience ambience_camp_center_day fadein 3
+    "Wenn du gesund sein willst, musst du dich abhärten! Leg dich mit dem nackten Bauch auf einen Nagel und dreh dich!"
+    "Meine dritte Ladung unterschied sich von der zweiten dadurch, dass dieses Mal irgendwie deutlich mehr Leute da waren!"
+    "Nein, es lag keineswegs daran, dass die Betreuer diesmal besser gearbeitet und mehr Pioniere mitgenommen haben."
+    if alt_day4_sl_7dl_workout:
+        "Offenbar war ich noch nicht ganz wach, obwohl ich sogar joggte und mich unter kaltem Wasser wusch."
+    else:
+        "Offenbar war ich noch nicht ganz wach, obwohl ich mir das Gesicht mit Eiswasser gewaschen hatte."
+    "Wie sonst wäre es zu erklären, dass sich in den Reihen der Pioniere Gesichter befinden, die etwas älter sind - etwa dreißig oder vierzig Jahre alt."
+    me "Brrrr!"
+    "Ich schloss meine Augen und schüttelte den Kopf."
+    "Die "alten" Pioniere sind nicht verschwunden."
+    show dv smile sport
+    with dissolve
+    dv "Warum schüttelst du den Kopf, hast du gestern Abend getrunken?"
+    me "Wer sind all diese Menschen?"
+    show dv smile sport
+    with dspr
+    dv "Du hast doch heute Geburtstag, oder?"
+    me "Ich wusste es eher nicht. {w}Warum sind sie hier?"
+    dv "Die Regeln lauten."
+    "Alice zuckte mit den Schultern."
+    dv "Wenn Sie mit Ihrem Kind im Camp sein wollen, tragen Sie eine Uniform."
+    me "Gibt es eine Kleiderordnung?"
+    show dv grin sport
+    with dspr
+    dv "Ich verstehe deine spießige Sprache nicht. Seien Sie nicht schlau, zeigen Sie mit dem Finger."
+    me "Was alle tragen, tragen auch die Eltern."
+    dv "So ist es nun einmal."
+    hide dv smile sport
+    "Slavia gab ein Kommando, und Alice stand neben mir und winkte mit ihren Gliedmaßen im Takt des Moderators."
+    "Die Reihen glätteten sich, die Eltern stellten sich diszipliniert auf der anderen Seite des Platzes auf."
+    show sl smile sport
+    with dissolve
+    sl "Los geht's mit der Übung! Füße schulterbreit auseinander, Arme ruckeln, und - eins!"
+    "Alle fuchtelten mit den Armen und hofften offenbar insgeheim, von hier weg zu ihren Feldbetten zu fliegen."
+    "Und ich..."
+    "Nun, ich beherrschte diese streng geheime Fähigkeit, als ich 18 war."
+    "Ich kann mich damit abfinden, dass ich heute Nacht wach bin und nicht schlafen werde."
+    "Eine sehr nützliche Fähigkeit!"
+    "Slavia stürzte sich auf alle, aber auch sie warf ab und zu einen Blick in meine Richtung."
+    show sl happy sport
+    with dspr
+    "Die fehlende Begeisterung in meinem Gesicht hat ihr wohl nicht gefallen."
+    "Denn sie hat auf ihre Weise versucht, mich aufzuheitern."
+    th "Du verschwendest deine Zeit. Die einzige Möglichkeit, mich richtig aufzuheitern, ist, es nicht im Camp zu benutzen."
+    dreamgirl "Benutze deine Fantasie, Luke!"
+    "Dieser Vorschlag war nicht ohne einen gewissen Sinn."
+    "Denn die Uniform von Glory zeigte, was gezeigt werden musste, und ließ dabei viel Raum für Fantasie."
+    th "Der einzige Lichtblick heute Morgen."
+    "dachte ich wehmütig, als Slavia die Pioniere losließ und auf mich zu lief."
+    "Mit einem ziemlich offensichtlichen Angebot, das man nicht ablehnen kann."
+    show sl laugh sport
+    with dspr
+    if alt_day4_sl_7dl_workout:
+        sl "Dieser wird auf einem kleinen Kreis sein."
+        "Das ist, gelinde gesagt, tröstlich."
+    sl "Lauft!"
+    hide sl with moveoutright
+    stop music fadeout 3
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day4_sl_7dl_breakfast:
+    scene bg ext_square_sunset3_7dl with dissolve
+    play music music_7dl["carefree"] fadein 3
+    play ambience ambience_camp_center_evening fadein 3
+    if alt_day4_sl_7dl_workout:
+        "Aufgrund eines weiteren ungeplanten Laufs fühlte ich mich nicht besonders gut."
+        "Daher war es für mich schwer zu begreifen, was am Lineal vor sich ging."
+        "Alles schwamm vor meinen Augen, jede Bewegung meiner Augenlider wurde von blinkenden, vielfarbigen Kreisen begleitet."
+    else:
+        "Ich habe überhaupt nicht geschlafen."
+        if herc or loki:
+            "Man könnte meinen, du hättest nur fünfzehn Minuten Schlafentzug, aber so ist es."
+            "Ich warf einen unglücklichen Blick auf Slawja."
+            th "Ich wünschte, du würdest drei Jahre lang nicht schlafen, dann würdest du es verstehen!"
+            "Ich schüttelte den Kopf - ich war ein wenig "gefahren", und den gelegentlichen Blicken aus meinem Umfeld nach zu urteilen, sah ich nicht gerade gut aus."
+    "Aber Slawja blühte auf und genoss das Leben. Sie war einen Kilometer entlang der inneren Begrenzung des Lagers gelaufen, ohne auch nur zu schwitzen."
+    th "Da wartet ein Absatz auf dich, Kleines. Vier Zeilen."
+    "Slavia stand neben mir und lächelte jedes Mal leicht, wenn ich sie ansah."
+    "Es war, als könnte sie mit ihren weiblichen Instinkten den Strom der Aufmerksamkeit spüren."
+    "Nicht gerade die liebevollste, muss ich sagen."
+    "Und gleichzeitig kam es mir nie in den Sinn, ihr zu sagen, sie solle sich von mir fernhalten."
+    dreamgirl "Syom Syomych, ein Einzelgänger und Mittelmäßiger, hat einen Mann gefunden, der alles für ihn lösen und ihn in ein besseres Leben treten kann?"
+    th "Das stimmt in etwa. {w}Irgendwie glaube ich nicht, dass wir von Slavi irgendwelche Gemeinheiten erwarten sollten."
+    th "Der Schein trügt zwar, aber sie verhält sich nicht wie ein potenzieller Fiesling und Feind."
+    "Wir wurden neu eingeteilt, ein wenig zusammengedrängt, was den ohnehin schon schmalen Wagen mit 2 Mann an der Seite etwas unübersichtlich und beengt machte."
+    "Sie machten Platz für die "Pioniere" im Alter von dreißig bis vierzig Jahren, die direkt hinter der fünften Gruppe standen."
+    "Olga rümpfte die Nase über die Empörung, sagte aber nichts."
+    "Offensichtlich traute sie sich nicht - schließlich war sie jünger als die meisten der "Neulinge"."
+    "Ich musste die Linie so führen, wie sie war, ohne zusätzliche Einführungen oder Exerzierkurse."
+    "Deshalb war sie auch zu schüchtern, um ihre blecherne Kehle zu benutzen."
+    "Vergeblich schüchtern, muss ich sagen: Ich habe nur das Ende ihrer Rede mitbekommen."
+    mt "Trupps, direkt... wo! Folgen Sie dem fünften Trupp in die Kantine, Schritt arsch!"
+    scene bg ext_dining_hall_near_day
+    with dissolve
+    if alt_day4_sl_7dl_workout:
+        th "Ich bin zu alt für diesen ganzen Unsinn. Ich kann nicht ohne Training aus meinem warmen Bett gezerrt werden und erst vier und dann noch anderthalb Kilometer zurücklegen müssen."
+        dreamgirl "Was für eine Belohnung!"
+        th "Ich habe so eine Auszeichnung noch nie gesehen. Es ist keine große Sache, nur um eine eng anliegende Form zu bewundern."
+        dreamgirl "Mochte es nicht? Dem Esel hat die Karotte nicht geschmeckt?"
+        "Ich antwortete nicht, sondern warf einen abfälligen Blick auf die "Karotte" neben mir."
+    show sl smile pioneer
+    with dissolve
+    sl "Wie geht es Ihnen?"
+    th "Eine Gartenrose, blüht und duftet. {w}Und lästig."
+    me "Schlecht."
+    show sl laugh pioneer with dspr
+    sl "Ich wusste, es würde dir gefallen."
+    sl "Ich habe eine gute Nachricht."
+    if alt_day4_sl_7dl_workout:
+        me "Was, noch besser als morgendliches Joggen?"
+    else:
+        me "Noch besser als unsere neue "Mannschaft"?"
+    sl "Natürlich sind Sie das!"
+    play sound sfx_open_dooor_campus_1
+    pause(1)
+    scene bg int_dining_hall_people_sunset_7dl
+    with dissolve
+    play ambience ambience_dining_hall_full fadein 5
+    "Slavia riss die Tür auf und ging in den Speisesaal, so dass ich hinter ihr herstapfen musste."
+    "Und es war erstaunlich leer, sogar mit den Muzzies, die sich in unsere Reihen gedrängt hatten."
+    show sl normal pioneer with dissolve
+    sl "Elterntag."
+    "Beantwortet die unausgesprochene Frage von Slavia."
+    sl "Die meisten der Kinder wurden von ihren Eltern mitgenommen. {w}Obwohl ich das nicht verstehe - warum sollte man sich jetzt treffen, wenn man sowieso in drei Tagen abreist."
+    me "Eine Eilmeldung nach der anderen."
+    "Das Mädchen nahm das Tablett und ging zum Servierbereich und nickte mir einladend zu, ihr zu folgen."
+    sl "Und meine kamen sehr früh, noch bevor ich aufstand, so dass ich sie bereits gesehen hatte und es keine Ablenkung geben würde."
+    me "Von was ablenken?"
+    show sl smile pioneer with dspr
+    sl "Haben Sie die neue Mannschaft gesehen?"
+    me "Sie sind kaum zu übersehen."
+    sl "Es ist ein Komitee, das das Lager besichtigt und kontrolliert. {w}Und ich wurde ihnen als Betreuer und Assistent zugeteilt."
+    me "Um sicherzustellen, dass die Pioniere nicht zu viele grüne Blaubeeren bekommen?"
+    show sl smile2 pioneer with dspr
+    sl "In diesem Jahr erhebt Sovyonok den Anspruch, ein vorbildlicher Ort der Erholung und Freizeitgestaltung zu sein. {w}Solche Titel werden nicht umsonst vergeben."
+    me "Ah-ha! So viele gute Nachrichten hatten Sie also!"
+    "Begeistert rieb ich meine Hände aneinander."
+    me "Du bist beschäftigt, also kann ich tun, was ich will!"
+    show sl laugh pioneer with dspr
+    sl "Sind Sie so erpicht darauf, mich loszuwerden?"
+    th "Ja!"
+    me "Ich bin nur im Urlaub hergekommen! Dann brauchst du mich nicht aufzuladen!"
+    show sl grin pioneer with dspr
+    sl "Du bist faul, weißt du das?"
+    "Entdeckte Amerika..."
+    show sl normal pioneer with dspr
+    me "Das ist doch nichts! Immerhin arbeitest du für sieben."
+    me "Wenn Sie uns zusammenzählen, kommen Sie auf eine normale Person."
+    "Glory rollte mit den Augen:"
+    show sl serious pioneer with dspr
+    sl "Eigentlich habe ich nur eine Sache für Sie!"
+    "Seinem ernsten Gesichtsausdruck nach zu urteilen, ging es um eine Angelegenheit von der Größenordnung einer Platzreinigung, nicht weniger!"
+    me "Welcher ist es?"
+    sl "Die Redner sind vom Tanz gestern Abend. Sie stehen immer noch auf dem Platz, und wir haben mittags ein Konzert."
+    me "Und Sie wollen, dass ich sie alle trage?"
+    show sl smile pioneer with dspr
+    sl "Ich fürchte, du kannst es nicht allein schaffen, also schicke ich dir ein paar Jungs aus der zweiten Gruppe."
+    if herc or loki:
+        menu:
+            "Schwarzenegger soll es tragen!" if loki:
+                $ karma -= 10
+                show sl serious pioneer with dspr
+                sl "Willst du nicht helfen?"
+                me "Woher wussten Sie das?"
+                show sl surprise pioneer with dspr
+                sl "Ich dachte, es würde dir nichts ausmachen, dich auch am Lagerleben zu beteiligen."
+                me "Ich nehme daran teil, auch wenn ich auf der Seite liege."
+            "Keine weiteren Termine?":
+                $ alt_day4_sl_7dl_help1 = True
+                show sl smile2 pioneer with dspr
+                sl "Ja, aber sie werden alle noch da sein, wenn du mit der Ausrüstung fertig bist."
+                me "Wo soll ich sie abholen?"
+                sl "Sie werden mich irgendwo finden, ich werde auf dem Gelände sein."
+                me "Sie können nicht nein sagen?"
+                show sl laugh pioneer with dspr
+                sl "Nein!"
+            "Du schuldest mir was!" if herc:
+                $ alt_day4_sl_7dl_help1 = True
+                $ karma += 10
+                show sl laugh pioneer with dspr
+                sl "Ich kaufe dich mit allem, was du willst!"
+                me "Und ich weiß, was ich mir wünsche!"
+                "Ich hatte eine interessante Idee."
+                show sl smile2 pioneer with dspr
+                sl "Und was ist das?"
+                me "Wenn ich fertig bin, wirst du es herausfinden!"
+                "Ich machte einen stolzen und trotzigen Gesichtsausdruck und zwang das Mädchen, wieder zu lächeln."
+                sl "Ich hoffe, es wird nichts Schlimmes sein. Ich werde nicht auf den Tisch steigen und gackern, nur damit du es weißt!"
+                me "Das müssen Sie auch nicht. Wie lauten die Namen meiner zukünftigen Assistenten?"
+                show sl normal pioneer with dspr
+                sl "Danya und seine Freunde."
+                me "Ja, es ist schwer für Leute mit diesem Namen. Und seine Freunde."
+                "Tief in Gedanken versunken, streckte ich mich."
+                show sl smile pioneer with dspr
+                sl "Sie gehen die ganze Zeit zusammen, das ist nicht zu übersehen!"
+                sl "Und wenn ich mich nicht täusche, kennen Sie sie!"
+    else:
+        $ alt_day4_sl_7dl_help1 = True
+        $ karma += 10
+        me "Gut."
+        "Ich seufzte."
+        me "Tragen Sie den runden, rollen Sie den eckigen. Wie du willst."
+        show sl smile2 pioneer with dspr
+        sl "Ну что такое? Willst du nicht helfen?"
+        "Nicht wirklich, natürlich. Aber versuchen Sie, das zu sagen."
+        sl "Sie sehen, Sie wissen, was ich meine."
+    "Schließlich waren wir an der Reihe, und jeder von uns bekam einen Teller mit Reis und Fleisch und ein Glas hellen Tees auf einem Tablett serviert."
+    dreamgirl "Im Gefängnis gibt's Nudeln!"
+    th "Steez, steez, steez."
+    show sl normal pioneer with dissolve
+    "Slavia zuckte jedoch nicht mit der Augenbraue."
+    "Natürlich hatte ich ihre Geschichte über ihre Familie gehört und darüber, wie sie für sich selbst kochen konnte."
+    "Aber irgendwie korreliert das schlecht mit der Fähigkeit, ein Junggesellenfrühstück wie dieses zu essen."
+    "Ohne mir zuzuhören oder meine Argumente zu verstehen, schöpfte Slavia den ersten Löffel mit einem äußerst zufriedenen Blick."
+    "Unprätentiosität in allen Bereichen."
+    "Oder besser gesagt, unverdorben."
+    me "Sie hätten einen anständigen Haferbrei machen können."
+    "murmelte ich und starrte ungläubig auf den Haufen auf meinem Teller."
+    sl "Probieren Sie es, Sie wissen, es ist köstlich!"
+    me "Führende Hundezüchter empfehlen sogar, Milchprodukte und Milchbrei zum Frühstück zuzubereiten, um den Körper mit Energie zu versorgen."
+    show sl laugh pioneer with dspr
+    sl "Du bist mürrisch wie ein alter Mann. {w}Versuch es, es wird dir gefallen."
+    "Auch hier stieß ich auf Unverständnis und schöpfte mit einem Seufzer den Inhalt meines Tellers."
+    "Und im Großen und Ganzen erwies sich Slavia als gar nicht so falsch!"
+    "Obwohl ich Frühstücks-Stroganoff ein bisschen pervers finde."
+    me "Warum sind die Eltern so früh gekommen?"
+    "Ich habe das geklärt, nachdem ich den ersten Löffel gekaut hatte."
+    show sl upset pioneer with dspr
+    sl "Sie sind sehr beschäftigt, man muss ein Auge auf seine Brüder haben."
+    me "Nehmen Sie sie also mit."
+    dreamgirl "Das ist richtig. Sechs Personen auf dem Vordersitz."
+    me "Wir würden uns sehen."
+    show sl normal pioneer with dspr
+    sl "Ja, ich denke, wir werden uns bald wiedersehen. Allerdings nur für eine kurze Zeit."
+    me "Die Ursache?"
+    "Slavia lächelte zufrieden:"
+    show sl smile2 pioneer with dspr
+    sl "Meine Arbeit wurde bemerkt und ich wurde eingeladen, in der nächsten Schicht als stellvertretende Beraterin zu arbeiten!"
+    sl "Ich werde also noch ein wenig länger hier bleiben."
+    me "Die Idee scheint Ihnen zu gefallen."
+    show sl happy pioneer with dspr
+    sl "Natürlich will ich das! Ich liebe dieses Lager, und ich liebe es, wenn es gut ist."
+    sl "Sie könnten übrigens auch versuchen, eine zu beantragen."
+    me "Und noch drei Wochen lang Lautsprecher mit sich herumschleppen?"
+    "Körperliche Anstrengung bedeutet nicht, dass ich Angst davor hatte, aber es regelmäßig zu tun, schien mir keine sehr vernünftige Idee zu sein."
+    show sl happy pioneer with dspr
+    sl "Ja! Разве не здорово?"
+    me "Nein."
+    show sl happy2 pioneer with dspr
+    sl "Semjon, du bist so ein Spaßvogel!"
+    me "Das ist kein Scherz. Nun, solange du hier auf einer Reise bist, kannst du auf diese Weise Spaß haben."
+    me "Aber es regelmäßig zu tun, das geht nicht. Die Leute werden dafür bezahlt!"
+    show sl sad pioneer with dspr
+    sl "Tut mir leid, tut mir leid, aber ich weiß nicht, wer hier spricht."
+    me "Und wenn es auf Russisch ist?"
+    show sl normal pioneer with dspr
+    sl "Glauben Sie, Alexej Maximowitsch hat sich nur umsonst beworben, weil er sich langweilt und ihm die Unterhaltung in seinem Leben fehlt?"
+    me "Woher soll ich das wissen? Ich habe auch noch nie in meinem Leben von Alexej Maximowitsch gehört, vielleicht langweilt er sich!"
+    show sl sad pioneer with dspr
+    "Slavia seufzte und begann geduldig zu erklären:"
+    sl "Alexej Maksimowitsch ist der Leiter unseres Lagers, er hat sich um den Titel eines vorbildlichen Erholungsortes beworben."
+    sl "Und er hat es nicht einfach ohne Grund getan!"
+    me "Nichts zu tun?"
+    show sl angry pioneer with dspr
+    sl "Ihretwegen!"
+    "Hier konnte ich nicht einmal eine Antwort finden."
+    th "Es stellt sich heraus, dass diese ganze Hektik meine Schuld ist?"
+    dreamgirl "Ja, das ist deine Superkraft, Joint-Mann!"
+    show sl dontlike pioneer with dspr
+    sl "Es waren deine Eltern, die beim letzten Mal anfingen zu fragen: Warum müssen sie dich in ein Lager schicken, das nicht einmal ein Modelllager ist?"
+    sl "Ich habe gestern auch einen Anruf erhalten."
+    me "Sie würden mich also rauswerfen, das ist alles, was sie tun würden."
+    show sl normal pioneer with dspr
+    sl "Schlägst du vor, dass wir dich rauswerfen, nur weil deine Eltern seltsame Fragen stellen?"
+    "Glory streckte die Hand aus und berührte meine Stirn."
+    sl "Hmm, kalte Stirn."
+    sl "Wie auch immer! Da alles, was hier passiert, indirekt auch auf dein Konto geht, finde ich es nur fair, dass du dich an den Reinigungsarbeiten und so weiter beteiligst."
+    me "Es ist deine Schuld, dass ich hungrig bin."
+    sl "Wie bitte? Was?"
+    if alt_day4_sl_7dl_help1:
+        "Ich habe versucht, das Lächeln nicht zu sehr zu verstellen."
+        me "Was soll ich sagen?"
+        sl "Keine Sorge, da gibt es nicht viel."
+        sl "Das ist auch gut für dich! Hier, du hast beim Frühstück mehr Worte gesagt als gestern den ganzen Tag."
+        sl "Wir werden noch einen Mann aus dir machen."
+        me "Daran zweifele ich nicht im Geringsten."
+    else:
+        me "Überhaupt nichts."
+        me "Sie sind derjenige, der versucht, mich zu bearbeiten, und was machen Sie in der Zwischenzeit?"
+        show sl smile pioneer with dspr
+        sl "Ich werde einen Rundgang durch das Lager machen, Kommentare entgegennehmen und den Ausschuss heute allgemein unterstützen."
+        me "Warum bekommen Sie den einfachsten Job?"
+        "Das Mädchen sah mir in die Augen und nickte langsam:"
