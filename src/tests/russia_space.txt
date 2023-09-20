@@ -1,2 +1,4 @@
 label alt_day0_start_d:
     "Мне снова снилось что-то."
+    "Und so will ich es dabei belassen und mich in einen endlosen Sturzflug nach unten schicken."
+    "Die Bewegungen wurden immer langsamer, Мне immer gemächlicher...."

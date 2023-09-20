@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs};
+use std::{collections::HashMap, fs, iter::Sum};
 
 use super::cli;
 use color_eyre::eyre::Result;
@@ -81,10 +81,17 @@ pub async fn translate() -> Result<()> {
         println!("Keine Translation Strings In Datei gefunden, welche übersetzt werden können.");
         return Ok(());
     }
+    let sum: usize = texts
+        .iter()
+        .map(|item| item.orig_text.chars().count())
+        .sum();
+
+    println!("Char Count: {}", sum);
 
     let translation_parts = translate_texts_deepl(translate_cli.api_key.as_str(), texts).await?;
     for part in translation_parts {
-        file_content = file_content.replace(&part.orig_text, &part.to_translated_text_decoded());
+        file_content =
+            file_content.replacen(&part.orig_text, &part.to_translated_text_decoded(), 1);
     }
 
     fs::write(

@@ -1,61 +1,31 @@
-﻿label alt_day1_start:
-    call alt_day1_vars
-    $ routetag = "common"
-    pause(1)
-    call alt_day1_begin
-    pause(1)
-    $ persistent.sprite_time = "day"
-    $ day_time()
-    $ alt_chapter(1, u"Erwachen")
-    call alt_day1_bus_start
-    pause(1)
-    $ alt_chapter(1, u"Erste Bekanntschaft")
-    call alt_day1_firts_met
-    pause(1)
-    $ alt_chapter(1, u"Ankunft")
-    call alt_day1_arrival
-    if (counter_sl_7dl != 1):
-        if herc or loki:
-            call alt_day1_chase1
-            $ alt_chapter(1, u"Zusammensetzung")
-            call alt_day1_warehouse
-            pause(1)
-    $ alt_chapter(1, u"Beraterin")
-    call alt_day1_mod_tan
-    pause(1)
-    $ alt_chapter(1, u"Elektronik-Techniker")
-    call alt_day1_elektron
-    pause(1)
-    $ alt_chapter(1, u"Exkursion")
-    call alt_day1_meeting
-    pause(1)
-    call alt_day1_soccer_d1
-    pause(1)
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(1, u"Abendessen")
-    call alt_day1_supper
-    pause(1)
-    if (counter_sl_7dl == 2):
-        $ alt_chapter(1, u"Exkursion. Abend")
-        call alt_day1_meeting2
+"Die Silhouette auf der Veranda erbebte, bewegte sich seltsam - und teilte sich in zwei ungleiche Hälften."
+    show dv angry pioneer2 at cright
+    show us fear sport at fright
+    with dissolve
+    "Es stellte sich heraus, dass es sich um zwei Rothaarige handelte."
+    "Zwei Leute, von denen ich heute schon fünfmal gewarnt wurde, mich fernzuhalten."
+    "Anstatt die Warnung zu beherzigen, habe ich...."
+    "Uljana sah ein wenig ängstlich aus, aber Alice packte den Stier sofort bei den Hörnern:"
+    dv "Was soll der ganze Lärm, Emporkömmling?"
+    if dr and (counter_sl_7dl != 1):
+        dv "Oh, und du bist mit deinem Freund hier!"
+        show sl angry pioneer with dspr
+        "Slawia runzelte die Stirn, reagierte aber nicht auf Dwatschewskajas Ausbruch."
+        dv "Hast du eine Erkältung, Neuling?"
+        me "Nein."
+        "Ich antwortete trocken."
+        show dv grin pioneer2 with dspr
+        dv "Siehst du, alles ist in Ordnung, alle sind gesund!"
+        show dv angry pioneer2 with dspr
+        extend " Jetzt nimm ihn am Griff und lass uns gehen!"
+        sl "Alice, ist dir klar, dass ich es dem Berater sagen muss, wenn du jetzt nicht aufhörst?"
+        show dv rage pioneer2 with dspr
+        dv "Verdammter Spitzel..."
     else:
-        $ alt_chapter(1, u"Die Verfolgung")
-        call alt_day1_chase
-        pause(1)
-        if alt_day1_us_shotted:
-            call alt_day1_headshot
-        else:
-            call alt_day1_nocatch
-        pause(1)
-        $ persistent.sprite_time = "night"
-        $ night_time()
-        $ alt_chapter(1, u"Retter")
-        call alt_day1_slavya_saviour
-        pause(1)
-    $ alt_chapter(1, u"Abend")
-    call alt_day1_lena
-    pause(1)
-    call alt_day1_sleep
-    pause(1)
-    jump alt_day2_start
+        dv "Keine Sorge, Ihre Fahne wird Ihnen nicht davonlaufen, danke, raus mit Ihnen!"
+        show sl angry pioneer with dspr
+        "Slawa runzelte die Stirn."
+        sl "Alice, ist dir klar, dass ich es dem Berater sagen muss, wenn du jetzt nicht aufhörst?"
+        "Ich war taktvoll still irgendwo in der Peripherie."
+        show dv rage pioneer2 with dspr
+        dv "Du bist also auch ein Spitzel..."

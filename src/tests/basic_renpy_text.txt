@@ -4,13 +4,13 @@ label alt_day1_begin:
     scene anim_underwater
     show blackout_exh
     with fade
-    "Я понял вдруг, что весь мир стал беспросветно-чёрной водой."
-    "Наверное, это и есть тот самый ад, которым меня столько пугали."
-    "Холод, тьма и полное отсутствие воздуха."
-    "И так хочется оставить всё как есть и отправить себя в бесконечное падение навстречу дну."
-    "Сил сопротивляться уже не оставалось."
-    "Движения становились всё медленнее, всё неторопливее…"
-    "Вскоре я двигался только вниз."
+    "Plötzlich wurde mir klar, dass die ganze Welt zu pechschwarzem Wasser geworden war."
+    "Ich schätze, das ist die Hölle, vor der ich mich so sehr gefürchtet habe."
+    "Kälte, Dunkelheit und völliger Mangel an Luft."
+    "Und so will ich es dabei belassen und mich in einen endlosen Sturzflug nach unten schicken."
+    "Es gab keine Kraft mehr, sich zu wehren."
+    "Die Bewegungen wurden immer langsamer, immer gemächlicher...."
+    "Bald bewegte ich mich nur noch abwärts."
     with fade
     return
 
@@ -18,38 +18,2071 @@ label alt_day1_bus_start:
     scene anim_underwater
     show blackout_exh
     with fade
-    "И когда ударился о дно, понял, что просто сплю."
+    "Und als ich ganz unten ankam, wurde mir klar, dass ich nur geträumt hatte."
     $ renpy.music.set_volume(0.7, delay=2, channel='sound_loop')
     play sound_loop sfx_cooling_engine_loop fadein 2
     if loki:
-        "Дикий холод сменился душной жарой."
-        th "Кажется, я наконец попал в свой личный ад."
-        th "Здесь душно, темно и тесно."
-        th "И довольно скучно."
-        "Самое странное, что боли не было, — то рвущее, обжигающее изнутри чувство, когда внутри меня что-то лопнуло под ударом ботинка, исчезло безвозвратно."
-        "Заскучав окончательно, я открыл глаза."
+        "Die grausame Kälte wurde durch brütende Hitze ersetzt."
+        th "Ich glaube, ich bin endlich in meiner eigenen persönlichen Hölle angekommen."
+        th "Es ist stickig, dunkel und beengt."
+        th "Und es ist ziemlich langweilig."
+        "Das Seltsamste war, dass es keinen Schmerz gab - dieses reißende, brennende Gefühl in mir, wenn etwas unter dem Aufprall eines Stiefels zerbrach, war weg, unwiderruflich weg."
+        "Völlig gelangweilt öffnete ich meine Augen."
     elif herc:
-        "Руки против моей воли потянулись проверить лицо."
-        th "Как будто там должна быть рана… Шрам?"
-        th "Порез?"
-        "Ничего подобного, кожа была ровной и чистой."
-        "Надо осмотреться."
-        "Я открыл глаза."
+        "Die Hände griffen gegen meinen Willen nach oben, um mein Gesicht zu untersuchen."
+        th "Als sollte dort eine Wunde sein... Eine Narbe?"
+        th "Ein Schnitt?"
+        "Nichts dergleichen, meine Haut war glatt und sauber."
+        "Wir sollten uns umsehen."
+        "Ich öffnete meine Augen."
     else:
-        "Я согнулся пополам, пытаясь выкашлять из себя влажную горечь."
-        "Одновременно хотелось и дышать, и как можно быстрее выплюнуть из себя то, что лениво колыхалось в лёгких."
-        th "Хотя стоп. Ничего в лёгких у меня нет."
-        "Дышалось легко и без проблем."
-        "Разве что было немного жарковато."
-        "Я открыл глаза."
+        "Ich krümmte mich in der Mitte und versuchte, die nasse Bitterkeit aus mir herauszuhusten."
+        "Ich wollte gleichzeitig atmen und so schnell wie möglich ausspucken, was in meiner Lunge träge vor sich hin plätscherte."
+        th "Brrr. Nichts in meiner Lunge."
+        "Es war leicht zu atmen und hatte keine Probleme."
+        "Nur war es ein bisschen heiß."
+        "Ich öffnete meine Augen."
     scene black with fade
-    "И тут же перехватил чей-то взгляд."
+    "Sofort fing er den Blick von jemandem ab."
     scene cg d1_mi_bus_7dl
     show blackout_exh
     with flash
-    "Заинтересованный взгляд. Как будто я какое-то экзотическое животное."
-    th "Девушка. {w}Симпатичная."
-    "Машинально отметил я."
-    "Самым логичным было бы ей улыбнуться, но у меня всегда были с этим проблемы."
-    "У меня было чувство, что я её знаю."
-    "Нет, мы не были знакомы, просто я где-то её видел."
+    "Ein interessierter Blick. Als wäre ich ein exotisches Tier."
+    th "Ein Mädchen. {w}Hübsch."
+    "bemerkte ich abwesend."
+    "Am logischsten wäre es gewesen, sie anzulächeln, aber damit hatte ich schon immer Probleme."
+    "Ich hatte das Gefühl, dass ich sie kannte."
+    "Nein, wir haben uns nicht gekannt, ich habe sie nur irgendwo gesehen."
+    if dr:
+        "Vielleicht auf einem Bildschirm?"
+    "Vielleicht haben Sie sich auf der Straße getroffen?"
+    "Ich meine, aquamarinblaue Augen und Haare in einem Farbton, der in der Presse nur als \"Cyan\" bezeichnet wird, daran würde ich mich auf jeden Fall erinnern, wenn ich sie sehen würde!"
+    "Ganz zu schweigen von dem exotischen Outfit, das eindeutig den sowjetischen Pionieren nachempfunden ist."
+    th "Tut mir leid, Schatz, aber du bist ein bisschen zu alt, um Pionier zu sein."
+    scene cg d1_mi_bus2_7dl
+    show blackout_exh
+    with dissolve
+    "Wir sahen uns einige Sekunden lang in die Augen, bevor sie nickte und, mit den Fingernägeln auf das Glas klopfend, davonlief."
+    scene white
+    show prologue_dream
+    with flash
+    th "Glas?"
+    th "Bin ich etwa in einem Bus?"
+    th "Aber ich erinnere mich ganz genau."
+    th "Ach, übrigens, was?"
+    "Ich erinnere mich genau daran, dass ich in einen Bus stieg und irgendwohin fuhr."
+    "Ob ich dort ankam, ist eine andere Frage - ab einem bestimmten Zeitpunkt klaffte ein schwarzer blinder Fleck in meinem Gedächtnis."
+    scene cg d1_mi_dv_bus_7dl with flash
+    "Es war Sommer draußen."
+    th "{b}Sommer?!{\b}" with vpunch
+    "Nicht weit vom Bus entfernt stand ein zweites Mädchen, etwas größer als das erste, ebenfalls sehr schön, mit kupferrotem Haar, das in der hellen Sonne heftig glitzerte."
+    "\"Cyan\", rannte das Mädchen auf sie zu und sagte schnell etwas, wobei sie mit den Händen winkte, während die Rothaarige ihr schweigend und ein wenig herablassend zuhörte."
+    scene cg d1_mi_dv_bus2_7dl with dissolve
+    "Dann sagte sie etwas, und der Cyanova lachte, auf eine kleine, bröckelige Art. So wie es nur Asiaten können."
+    "Die ganze Zeit über saß ich da und versuchte, mich zu zwingen, mich zu bewegen."
+    th "Es war nicht die Lähmung, die mich gebrochen hat, denn ich konnte meine Augen öffnen!"
+    scene bg int_bus with flash
+    "Beide Mädchen gingen weg und ließen mich allein."
+    "Und ein paar Minuten später begann die Mobilität zu mir zurückzukehren."
+    "Schließlich gelang es mir, meinen Kopf zu drehen."
+    "Ja, das ist definitiv nicht das LIAZ, auf das ich mich eingelassen habe."
+    "Die Sitze erstreckten sich paarweise entlang des Salons und bildeten in der Mitte einen schmalen Gang, der an die Ikarus-Busse aus meiner fernen Kindheit erinnerte."
+    "Ich will verdammt sein, wenn das nicht ein Ikarus ist!"
+    show blinking
+    "Ich sackte erschöpft in den Stuhl."
+    th "Hallo, hier sind wir!"
+    th "Was ist hier eigentlich los?"
+    th "Einige gefärbte Asiaten, Rothaarige - und nicht ein einziger von ihnen kam in den Salon und half einer behinderten Person."
+    "Meine Ohren waren ungewohnt leer - die Kopfhörer waren herausgefallen und machten irgendwo auf meiner Brust ein leises Geräusch."
+    "Nachdem ich die Flüchtigen gefangen hatte, versuchte ich, sie in Position zu bringen, aber ohne auch nur zu zögern, fielen sie sofort aus."
+    th "Sind sie gebrochen?"
+    th "Es wird von Stunde zu Stunde nicht einfacher."
+    "Ich schaltete den Player aus und ging zum Ausgang."
+    "Irgendwie gab es überhaupt keine Angst - der moderne Mensch wird selten von irgendetwas überrascht."
+    "Und hier hatten die Wunder einfach schon eine Quote ausgewählt, so dass ich nur noch träge das Erstaunliche sagen musste."
+    "Alles ist gesünder für die Psyche."
+    "Als ich bemerkte, dass ich immer noch Winterkleidung trug - ein weiterer Punkt auf meiner wachsenden Liste von Fragen -, warf ich meinen Mantel ab, was bei dieser Hitze unangemessen war, und machte mich auf den Weg zum Ausgang."
+    scene bg int_bus:
+        zoom 1.0 xalign 0.5 yalign 0.4
+        linear 6.0 zoom 2.0 xalign 0.5 yalign 0.4
+    with dissolve
+    th "Nein, aber wie lange habe ich geschlafen, dass der Winter Zeit hatte, zu Ende zu gehen?"
+    th "Oder träume ich noch?"
+    me "Aua!" with flash_red
+    "Ich habe mich gezwickt."
+    "Der Schmerz ließ ein wenig nach, aber es gab keine Möglichkeit, aufzuwachen."
+    stop music fadeout 5
+    stop sound_loop fadeout 2
+    th "Es ist an der Zeit, die Gegend zu erkunden."
+    "Die Tür war offen, und ich konnte ungehindert nach draußen gehen."
+    "Und im selben Moment meldete sich die halb erstickte Panik wieder zu Wort."
+    $ renpy.music.set_volume(1.0, delay=2, channel='sound_loop')
+    stop music fadeout 3
+    scene white with dissolve
+    pause(0.5)
+    scene bg ext_camp_entrance_day:
+        xalign 0.5 yalign 0.5 zoom 1.15
+        linear 0.2 zoom 1.2 xalign 0.5 yalign 0.5
+        ease 0.05 zoom 1.0 xalign 0.5 yalign 0.5
+    play ambience ambience_camp_entrance_day fadein 3
+    play music music_7dl["dead_silence"] fadein 3
+    "Denn mir wurde ein Bild gezeigt, das mich mein ganzes bewusstes Leben lang verfolgt hat!"
+    scene
+    $ renpy.show("bg ext_entrance_night_clear_7dl", what = Dawn("bg ext_entrance_night_clear_7dl"))
+    show anim_grain
+    with touch
+    "Ich konnte mich nicht erinnern, wann ich das erste Mal von diesem mit Kugeln bemalten Tor geträumt hatte."
+    scene
+    $ renpy.show("bg ext_entrance_night_clear_7dl", what = SS_com("bg ext_entrance_night_clear_7dl"))
+    show anim_grain
+    with blind_d
+    "Aber er erinnerte sich an sie - bis ins Detail! - von den Pflöcken oben, die sich in beiden Richtungen so weit das Auge reicht an der Backsteinmauer hinunterziehen, bis hin zu dem fünfzackigen Stern an der Kreuzung der Flügel."
+    "Nur dass es immer Nacht war, wenn ich mich in meinen Träumen hier wiederfand."
+    scene bg ext_camp_entrance_day
+    with fulldiam
+    "Und nun war der Tag in vollem Gange."
+    "Und ich befand mich nicht mehr in einem Traum, sondern in der Realität!"
+    "Ich stand taumelnd da, schluckte bitteren Speichel, rollte mit den Augen und schwankte eifrig im Gleichschritt mit der Schwerkraft."
+    "Vier Ausatmungen, zwei Einatmungen, Puls, Tinnitus."
+    scene black with flash_red
+    "Und brach entzwei, drehte sich um und bettelte um den Tod als Erlösung vom Leiden - seine Haarwurzeln, seine Augäpfel, sein Schädel schmerzten von innen heraus...."
+    "Wenig überraschend fand ich mich einen Moment später auf allen Vieren stehend in einer braunen Pfütze - dem Inhalt meines Magens - im Gras wieder."
+    scene bg ext_camp_entrance_day with fade
+    th "Ich muss aufstehen."
+    "dachte ich unnahbar."
+    scene bg ext_bus with dissolve
+    "Mühsam kroch ich zurück zum Bus, setzte mich auf die Trittstufe und zog mein Handy aus der Tasche."
+    if dr:
+        th "Ich muss meine Mutter anrufen."
+        "Die neueste Ausgabe."
+        "Kein Wunder, denn außer ihm waren noch eine ganze Reihe anderer Personen anwesend."
+    else:
+        th "Ich muss zu jemandem durchkommen."
+        if herc:
+            "Die letzte Nummer auf der Anrufliste war die von Zinaida."
+        else:
+            "In einer anderen Situation wäre ich überrascht gewesen, Xanas Nummer als letzte in der Anrufliste zu sehen, aber das war mir jetzt egal."
+    play sound sfx_cellular_phone_error
+    pause(3)
+    me "Was zum..."
+    "Ich nahm den Empfänger vom Ohr und überprüfte die Empfangsqualität, aber statt eines minimalen Signals gab es ein fettes rotes Kreuz - Verlust des Signals des Betreibers."
+    me "{image=alt_KS_censor}" with vpunch
+    "Schimpfend schlug ich mit der Faust auf den Bus."
+    "Der moderne Mensch hat neben seinem Mobiltelefon noch andere Möglichkeiten, der Zivilisation zuzurufen."
+    "Ich beschloss, sie alle zu überprüfen."
+    "Die zahlreichen drahtlosen Netzwerke des Telefons waren jedoch stumm."
+    "Sogar GPS, und das im Freien!"
+    me "Mascha gehört dir!"
+    me "Soll das ein Scherz sein?!"
+    stop music fadeout 4
+    scene black with flash_red
+    "Ein stechender Schmerz in meinen Schläfen war das letzte, was ich spürte, bevor ich in Vergessenheit geriet....."
+    stop ambience fadeout 3
+    with fade
+    return
+
+label alt_day1_firts_met:
+    $alt_pause(1)
+    scene black
+    sl "...sie suchen ihn, und er schläft hier!"
+    "Eine Stimme kam aus dem Nichts."
+    "Ich drehte meinen Kopf herum und versuchte herauszufinden, von wo aus sie sprachen."
+    play sound sfx_punch_medium
+    with vpunch
+    scene
+    $ renpy.show("bg ext_bus", what = Noon("bg ext_bus"))
+    show unblink
+    play ambience ambience_camp_entrance_day fadein 9
+    "Er schlug mit dem Kopf schmerzhaft gegen die Tür und öffnete die Augen."
+    show sl pioneer shade with flash
+    play music music_list["take_me_beautifully"] fadein 1
+    "In der prallen Sonne konnte ich nicht sehen, wer mit mir sprach."
+    "Aber zumindest die Umrisse einer Figur - eindeutig weiblich - waren zu erkennen."
+    th "Sind wir also wieder als Verlierer bekannt?"
+    th "Bevor man sich überhaupt bewegen oder irgendwohin gehen kann, hat man schon etwas falsch gemacht."
+    "Toll, nicht wahr?"
+    "Die Frau - oder war es ein Mädchen? - Sie sagte immer wieder etwas mit erhobener Stimme und fuchtelte mit den Armen, aber ich konnte sie kaum wahrnehmen."
+    "Meine Augen verschwammen, die Geräusche wurden durch den Lärm in meinen Ohren verdeckt, und als ich versuchte, aufzustehen, griff ich verzweifelt nach der Stufe."
+    sl "Geht es Ihnen gut?"
+    th "Nein, dumme Frau, mit mir stimmt etwas nicht! {w}Was für triviale Fragen, haben Sie zu viele Hollywood-Filme gesehen?!"
+    "Wie immer, bellte ich vor mich hin."
+    "Kein Wort kam über meine Lippen - ich schwöre! - aber das Mädchen wich einen Schritt zurück, offensichtlich von etwas erschüttert."
+    "Und endlich konnte ich ihr Gesicht sehen."
+    scene
+    $ renpy.show("bg ext_bus", at_list = [zenterleft], what = Noon("bg ext_bus"))
+    show sl serious pioneer
+    with dissolve
+    "Immerhin war das Mädchen sehr jung, sehr schön; zu Hause nannte ich solche Leute himmlisch und mied ihre Gesellschaft mit aller Kraft."
+    "Wir haben zu unterschiedliche Kategorien, zu unterschiedliche soziale Kreise."
+    "Wenn so ein Engel eines Tages auf mich herabsteigt, dann nur, weil er etwas von mir will."
+    "Normalerweise etwas, das direkt mit meinen Fähigkeiten zu tun hat."
+    if loki:
+        "So etwas hatte ich auch einmal, und ich habe immer noch damit zu kämpfen."
+    elif herc:
+        "Ich bin ein Eichenknecht, aber ich kannte mich mit Computern aus, so dass ich helfen konnte, wenn ich Hilfe brauchte."
+    else:
+        "Wie viele Visitenkarten, Avatare und Logos habe ich solchen Engeln kostenlos gestempelt... Bevor ich anfing, mich vor ihnen zu scheuen."
+        "Sie sind auch beleidigt, dass Sie ihnen nicht helfen wollen."
+    "Zusammen mit den anderen Seltsamkeiten trug die Anwesenheit einer solchen Schönheit nicht gerade zu meinem Seelenfrieden bei."
+    "Die Reaktion war zu erwarten: Ich war misstrauisch."
+    show sl normal pioneer with dspr
+    sl "Was ist los?"
+    menu:
+        "Haben Sie einen Wunsch?":
+            $ lp_sl += 1
+            $ karma += 10
+            show sl smile pioneer with dspr
+            sl "Ah, er redet!"
+            "Sie war auf unerklärliche Weise glücklich über irgendetwas."
+            "Offenbar wird hier nicht viel mit ihr geredet."
+            th "Eine beeindruckende Leistung, kein Zweifel."
+            th "Kommen Sie auf den Punkt."
+            show sl normal pioneer with dspr
+            sl "Warum sind Sie so wütend?"
+            me "Es ist alles in Ordnung."
+            "Ich antwortete und war überrascht über den unerwartet hohen Ton, den meine Kehle von sich gab."
+            th "Das ist schon in Ordnung, das erste, was er sagte, war \"Kikeriki\"."
+            th "Gibt es Grenzen für einen schlechten ersten Eindruck?"
+            show sl smile2 pioneer with dspr
+            sl "Sagen Sie es mir, bitte! Ich werde versuchen zu helfen!"
+            "Das Mädchen lächelte unwiderstehlich, charmant und offen."
+            "Das hat die Situation nicht entschärft, sondern nur noch verschlimmert."
+            "Das ist richtig - je aufrichtiger das Lächeln, desto schwerer der Stein hinter der Sehne."
+            me "Es ist alles in Ordnung."
+            "Ich wiederholte."
+            sl "Ja? Ja. {w}Ja, klar."
+            show sl normal pioneer with dspr
+            sl "Olga Dmitrievna hat mich geschickt, um Sie abzuholen, weil der Bus schon seit einer halben Stunde hier ist und Sie immer noch nicht auf dem Gelände aufgetaucht sind."
+            th "Olga Dmitrievna."
+            "Die Glocke hat nirgendwo geläutet, es hätte auch ein Dai Khun Pei sein können - das hätte ich gemerkt."
+            show sl smile pioneer with dspr
+            sl "Berater."
+            "Erklärte das Mädchen."
+            "Ich erinnerte mich an die erste Person, die ich sah, als ich meine Augen öffnete - diese japanische \"razakhabista-Schönheit\" in ihrer Pioniermädchenuniform."
+            "Ja, und mein jetziger Gesprächspartner war genau so gekleidet."
+            "Weißes Hemd, scharlachrote Krawatte und halbhoher Rock. Das Einzige, was noch fehlt, ist eine Tätowierung \"Ich werde Iljitsch nicht vergessen\" für volle Authentizität."
+            th "Richtig. {w}Also schreiben wir es auf - wir haben Pioniere gespielt und sogar Berater hinzugezogen."
+        "Ignoriere sie":
+            $ lp_sl -= 1
+            $ karma -= 10
+            $ alt_day1_sl_ignored = True
+            show sl surprise pioneer with dissolve
+            sl "Warum sagst du nichts?"
+            "Der Fremde wirkte durch mein Schweigen entmutigt."
+            th "Ich werde dir \"Hallo, Püppchen\" sagen, ehrlich - was ist das, Pionier? - sobald ich wieder auf den Beinen bin."
+            "Ich habe es versprochen."
+            "Plötzlich war es nass und kalt unter seiner Nase, zwei Blutbahnen liefen über seine Oberlippe."
+            sl "Was ist das - bluten Sie?!"
+            "Wie aus dem Nichts erschien ein Taschentuch in ihrer Hand."
+            show sl surprise pioneer close with dspr
+            "Die Fremde trat vor und wollte offensichtlich das Blut wegwischen, aber ich winkte ab."
+            me "Не надо. Es ist alles in Ordnung."
+            sl "Was ist \"in Ordnung\"?"
+            sl "Sie müssen eine Krankenschwester aufsuchen."
+            "Ich fühlte mich nicht sehr wohl dabei, als ob ich einer mir wohlgesonnenen Person etwas sehr Schlimmes antun würde."
+            "Genauso wenig werde ich glauben, dass eine himmlische Person einer Person wie mir gegenüber unentgeltlich positiv eingestellt ist."
+            "Ich bin sicherlich ein infantiler Idiot - aber nicht so sehr!"
+            show sl sad pioneer with dspr
+            sl "Jetzt wird es wirklich schlimm."
+            "Sie wurde wütend."
+            sl "Ich bringe Sie zur Krankenschwester."
+            sl "Was ist, wenn es Ihnen unterwegs schlechter geht?"
+            "Oh, und jetzt werden wir die unwiderstehlichste Waffe einer Frau einsetzen - die Tränen einer Frau."
+            "Wenn ich irgendwelche Zweifel hatte, dass ich benutzt werden würde, sind sie einfach von selbst verschwunden."
+            sl "Sollen wir?"
+            me "Lass es. Ich fühle mich schon besser."
+            "Ich riss mich zusammen, lehnte mich noch einmal auf die Stufe und stand auf."
+            "Immer noch ein wenig Übelkeit, aber nichts Schlimmes."
+            me "Siehst du?"
+            sl "Sind Sie sicher? Vielleicht sollte ich dich doch hinausbegleiten."
+            "Das Mädchen beharrte weiter darauf."
+            th "Sie ist so hartnäckig!"
+            if loki or herc:
+                "Ich wischte das Blut mürrisch mit meinem Ärmel weg und fragte:"
+                me "Haben Sie denn nichts anderes zu tun?"
+                sl "Es gibt sie, aber..."
+                me "Nun, machen Sie weiter."
+            else:
+                "Ich wischte das Blut leise mit meinem Ärmel weg."
+                me "Ich fühle mich jetzt besser."
+                "Ich wiederholte."
+            "Im Moment brauche ich dringend die Einsamkeit, um zur Vernunft zu kommen und die Situation zu begreifen, und diese Blondine steht mir nur im Weg."
+            show sl sad pioneer with dspr
+            sl "Ihr Charakter, natürlich..."
+    "Von irgendwo auf der anderen Seite ertönte ein Geräusch, das ich, als ich mein Gedächtnis anstrengte, als ein Horn erkannte."
+    th "Das ist richtig! Pionier-Reenactment!"
+    "Und der Fremde machte sich Sorgen:"
+    if alt_day1_sl_ignored:
+        sl "Es tut mir leid, bitte, aber ich muss los."
+        sl "Es gibt Fälle, die niemand anderes als ich lösen kann."
+        th "Ich wette, das tun Sie."
+        me "Ich verstehe."
+    else:
+        show sl normal pioneer with dspr
+        sl "Ich würde gerne mit Ihnen reden, aber die Zeit drängt."
+        sl "Ich muss los, ich habe zu tun, ich habe zu tun!"
+        "Und hier kommen wir nahtlos zur Delegation von Befugnissen."
+        sl "Und niemand außer mir wird sie lösen, also bist du auf dich allein gestellt, okay?"
+    "Das Mädchen zog ein vierfach gefaltetes Blatt aus ihrer Tasche."
+    if alt_day1_sl_ignored:
+        show sl normal pioneer with dspr
+    else:
+        show sl smile pioneer with dspr
+    sl "Ich dachte, ich begleite dich selbst hinaus, aber okay."
+    "Das ungefaltete Blatt entpuppte sich als Landkarte."
+    scene bg map_alt1:
+        zoom 1.2 xalign 0.5 yalign 0.5 subpixel True
+        easeout 8.0 zoom 1.0
+    with flash
+    sl "Sehen Sie, wir sind hier."
+    scene bg map_explain with fade
+    "Sie zeigte auf ein Rechteck, auf dem in schöner Handschrift \"Parkplatz\" stand - ein fettes rotes Kreuz war zu sehen."
+    sl "Und Sie müssen in diese Richtung gehen, zum Haus von Olga Dmitrievna."
+    show sl smile2 pioneer with dissolve
+    sl "Du kennst dich doch mit Landkarten aus, oder?"
+    scene bg ext_bus
+    show sl smile2 pioneer at cleft
+    with dissolve
+    "Das Mädchen lächelte, als ob eine negative Antwort für sie unmöglich wäre."
+    me "Ich werde es ausprobieren."
+    sl "Das ist großartig. {w}Und für die Zukunft noch ein Ratschlag."
+    if alt_day1_sl_ignored:
+        th "Also, worum geht es hier? Traue niemandem? Oder netter zu den Leuten sein? Gib mir eine Plattitüde, du kleiner Narr."
+        show sl serious pioneer with dspr
+        "Das Mädchen erschauderte erneut, als hätte es meine Gedanken mitbekommen."
+    else:
+        me "Welcher ist es?"
+    sl "Du siehst, es ist nicht mehr der Anfang deiner Schicht, du bist sehr spät dran....."
+    show sl normal pioneer with dspr
+    "Sie zuckte mit den Schultern, als sei sie erkältet."
+    "Und ich nickte stumm - ich verstand, ich war zu spät zum Schichtbeginn - zum Camp? - und umsonst."
+    sl "Und du hast Kleidung wie diese...."
+    "Sie sah wieder auf meine Jeans und meinen Pullover."
+    if alt_day1_sl_ignored:
+        th "Besser als Ihre Pionierattrappe."
+        th "Es tut mir leid, ich bin Mitglied in Ihrem privaten Club, ohne mich zu fragen."
+        th "Jetzt müsst ihr euch mit mir abfinden."
+    else:
+        "Ich nickte."
+        "Die Kleidungsstücke waren nicht nur außerhalb der Saison, sondern auch auffällig."
+        th "Ich bin überrascht, dass Blondie keine Fragen stellt."
+    $ alt_pause(0.7)
+    me "И?"
+    "Ich konnte es nicht ertragen - die Pause zog sich eindeutig in die Länge."
+    sl "Und das Camp hat seine Traditionen....."
+    sl "Wenn Sie eine Gruppe von Leuten mit Eimern sehen, laufen Sie weg. Sie sind wahrscheinlich hinter dir her."
+    "Es sah logisch aus: wenn die Epoche rekonstruiert werden sollte, dann vollständig, einschließlich der \"Strafen\"."
+    me "Verstanden."
+    "Ich nickte."
+    show sl normal pioneer with dspr
+    sl "Ich bin weggelaufen, tut mir leid. Und willkommen bei der Eule!"
+    if herc or loki:
+        menu:
+            "Auf Wiedersehen":
+                $ karma -= 10
+                "Jetzt wird sie weg sein, und ich werde ein wenig freier atmen, die Situation ein wenig schätzen."
+                me "Mmh. Chawakakawa."
+                th "Ich kann den magischen Moment kaum erwarten, in dem ich nicht mehr gepiekst und gestupst werde."
+                show sl smile pioneer with dspr
+                "Offenbar stand mir der Wunsch, allein zu sein, ziemlich deutlich ins Gesicht geschrieben."
+                hide sl with easeoutleft
+                "Also nickte das Mädchen, lächelte und verschwand hinter dem Tor."
+                th "Halleluja!"
+                stop music fadeout 5
+                "Ich steckte die Karte in meine Tasche und genoss ein paar Minuten lang die Stille."
+                "Ein acht Millionen Jahre altes Bauchgefühl sagte mir unter anderem, dass ich in naher Zukunft nur noch wenige solcher Momente haben würde."
+            "Werde ich mich dort nicht verirren?" if not alt_day1_sl_ignored:
+                $ karma += 10
+                $ lp_sl += 1
+                $ counter_sl_7dl = 1
+                me "Sie haben dich nicht nur geschickt..."
+                sl "Ehrlich gesagt, nein..."
+                "Sie dachte ein paar Sekunden lang nach."
+                "Dann schüttelte sie den Kopf."
+                sl "Aber du hast auch recht, gemeinsam kommen wir viel schneller ans Ziel. Los geht\'s!"
+                "Sie packte mich am Arm und zog mich hinter sich her."
+                "Ah, mit einem Mädchen an der Hand spazieren gehen! Was für ein romantischer Blödsinn ist das!"
+                "Es ist, als wäre man vier Jahre alt, man hält eine Hand und summt \"Potato\", und in der Gruppe warten ein Glas Soursop und eine lachende Großmutter, die einen betreut."
+                stop music fadeout 5
+                "Ich habe vergessen, wann ich das letzte Mal mit so jemandem ausgegangen bin."
+            "Warten Sie!" if alt_day1_sl_ignored:
+                $ karma += 10
+                $ lp_sl += 1
+                $ counter_sl_7dl = 1
+                show sl surprise pioneer with dspr
+                sl "Was ist das?"
+                "Ich rang nach Worten, aber stattdessen murmelte ich etwas vor mich hin."
+                "Das passiert, wenn man auf seinen eigenen Stolz tritt."
+                me "Können Sie mich noch begleiten?"
+                me "Sie wurden aus einem bestimmten Grund geschickt."
+                show sl normal pioneer with dspr
+                sl "Ehrlich gesagt, nein..."
+                "Sie dachte ein paar Sekunden lang nach."
+                show sl smile pioneer with dspr
+                sl "Aber du hast Recht. Zusammen sind wir viel schneller am Ziel. Los geht\'s!"
+                "Sie packte mich am Arm und zog mich hinter sich her."
+                stop music fadeout 5
+                "Persönliche Freiräume und Schüchternheit gab es für dieses Mädchen definitiv nicht."
+
+
+    else:
+        menu:
+            "Du gehst schon?":
+                $ lp_sl += 1
+                $ karma += 10
+                $ counter_sl_7dl = 1
+                "Das Mädchen nickte und drehte sich fast um, um zu gehen."
+                "Aber ich sah wohl wirklich erbärmlich aus, denn sie runzelte die Stirn und sagte:"
+                show sl serious pioneer with dspr
+                sl "Weißt du was... Lass mich dich selbst zum Berater bringen."
+                sl "Nur damit Sie sich keine Sorgen machen müssen."
+                "Ich war dagegen."
+                sl "Das ist großartig. Los geht\\'s! {w}Übrigens, ich bin Slavya!"
+                $ meet('sl','Ruhm')
+                $ alt_day1_sl_met = True
+                "Aber meine Meinung wurde nicht berücksichtigt."
+                "Sie nahm meine Hand - die Berührung ließ mir eine Gänsehaut über die Schultern laufen - und ging voraus."
+                "Es war großartig, die Hand eines solchen Mädchens zu halten, und doch war es herrlich!"
+            "Laufen.":
+                $ karma -= 10
+                me "Ich hoffe, ich verlaufe mich unterwegs nicht."
+                "murmelte ich."
+                show sl laugh pioneer with dspr
+                sl "Nein! Das ist nicht Artek oder gar Caravelle, das ist ein kleines Lager, das kriegst du schon hin."
+                sl "Nichts für ungut, bitte, aber ich habe wirklich etwas zu tun."
+                th "Mach weiter!"
+                stop music fadeout 3
+                hide sl with dissolve
+                "Mit einem Nicken zu mir, verschwand sie hinter dem Tor."
+    if (counter_sl_7dl == 1):
+        scene bg ext_camp_entrance_day with dissolve
+        "Ich erstarrte an Ort und Stelle und schaute mich erneut am Tor um."
+        show sl smile pioneer with dissolve
+        sl "Warum bist du auf? Los geht\'s."
+        me "Ah... ähm..."
+        th "Weißt du, ich habe diesen Ort im Traum gesehen."
+        th "Sie wissen schon."
+        "Ich wollte meinen Kopf gegen die weichen Wände schlagen und mir die Kehle aus dem Hals schreien."
+        "Geben Sie mir Haloperidol, Aminazin, irgendetwas, um zu bestätigen, dass es wirklich nicht wahr ist."
+        if alt_day1_sl_ignored:
+            show sl sad pioneer with dspr
+            sl "Fühlen Sie sich krank?"
+            "erkundigte sich das Pioniermädchen, immer noch besorgt über meinen Zustand."
+            me "Hallo. Na, komm schon."
+            show sl normal pioneer with dspr
+            sl "Okay... wenn du so denkst."
+            "Sie stieß den Torflügel auf, ließ mich durch und folgte mir."
+        else:
+            show sl normal pioneer with dspr
+            sl "Ist alles in Ordnung?"
+            "Sie erkundigte sich."
+            sl "Du siehst verängstigt aus."
+            th "Natürlich war er das!"
+            me "Neue Orte, neue Menschen..."
+            "Ich antwortete zweideutig, aber das schien dem Mädchen zu genügen."
+            show sl smile pioneer with dspr
+            sl "Mach dir keine Sorgen. Es wird dir hier gefallen."
+            "Sie stieß den Torflügel auf, ließ mich durch und folgte mir."
+    else:
+        play music music_list["trapped_in_dreams"] fadein 2
+        "Mir selbst überlassen, setzte ich mich auf die Trittstufe des Busses und atmete erleichtert auf."
+        "Mir wurde immer beigebracht, dass man, bevor man etwas tut, herausfinden muss, ob man es überhaupt tun sollte."
+        "Idealerweise wäre es natürlich besser, einen Aktionsplan zu machen, aber es war zu früh, es gab nicht genügend Daten, und den Plan, mir den Kopf zu zerbrechen und in verschiedene Richtungen zu rennen, den das heulende Unterbewusstsein vorschlug, verwarf ich als unhaltbar."
+        "Ich musste Antworten auf zwei ewige russische Fragen finden: \"Wer ist schuld?\" und \"Was ist zu tun?\"."
+        scene bg ext_road_day with dissolve
+        "Die Natur um sie herum tobte in leuchtenden, gesättigten Farben, so dass man sich fragen musste, welches Gift in ihrem Blut herumschwirrt."
+        "Ich habe gehört, dass einige Medikamente diesen Nebeneffekt haben - man sieht die Welt übersättigt und hell."
+        "Es ist, als hätte jemand den Regler für die Farbsättigung auf Maximum gestellt."
+        "Infolgedessen glich das Bild der Natur im mittleren Teil Russlands entweder dem Dschungel des Amazonas oder der Leinwand eines Impressionisten."
+        scene bg ext_sky_7dl with dissolve
+        "Und der Himmel über uns war so klar wie nur...."
+        me "Nein, wirklich?"
+        me "Sommer?"
+        "Ich fühlte mich wie Heinleins Held, der die Tür öffnet."
+        "Nur konnte er sich nicht mehr an die Details erinnern."
+        scene bg ext_road_day with dissolve
+        "Ich habe mich aufgerichtet, und...."
+        $ renpy.music.set_volume(0.1, delay=2, channel='music')
+        scene bg black with fade
+        "Seine Schläfen verrenkten sich vor Schmerz und Blut tropfte aus seiner Nase."
+        "Aber das war mir egal, denn durch die entstandene Lücke in der Vergangenheit stürmten die Erinnerungen herein."
+        stop ambience fadeout 3
+        scene anim intro_14 with fade2
+        play sound sfx_intro_bus_transition
+        stop music fadeout 2
+        $ alt_pause(3)
+        scene anim intro_15 with fade
+        $ alt_pause(3)
+        scene anim intro_16:
+            xalign 0.5 yalign 0.5 zoom 1.0
+            linear 0.5 zoom 1.25 xalign 0.5 yalign 0.5
+        $ alt_pause(3)
+        play ambience ambience_7dl["int_silence"] fadein 1
+        "Ich begann mich zu erinnern."
+        "Die städtische Landschaft außerhalb des LIAZ-Fensters wurde durch die Vorstädte und dann durch Felder ersetzt."
+        "Und die Straße, die zunächst flach und glatt wie eine deutsche Autobahn war, verwandelte sich sehr bald in eine holprige Provinz-Nebenstraße."
+        "Was geschah davor? Erinnern wir uns!"
+        show anim_intro_recall:
+            xalign 0.5 yalign 0.5 zoom 1.35
+            linear 3.0 zoom 0.3 xalign 0.5 yalign 0.5
+        pause(3)
+        if loki:
+            scene bg ext_winterpark_7dl
+            show prologue_dream
+            with flash_red
+            with vpunch
+            "Ein scharfes, schmerzhaftes Stechen irgendwo in meiner Brust - so scharf, dass ich fast in der Mitte zusammenbrach."
+            th "Phantomschmerzen?"
+            "Eher eine Erinnerung an etwas..."
+            th "Ich wollte irgendwohin gehen, aber ich weiß nicht mehr, ob ich dort angekommen bin."
+            th "Stattdessen bin ich hier gelandet."
+            "Doch wo die Erinnerung machtlos war, begann die Diözese der Empfindungen."
+            "Kälte. Frost. Der Schmerz von knirschenden Knochen."
+            "Das langsame Verblassen des Bewusstseins."
+            stop ambience fadeout 1
+            scene bg ext_road_day with flash
+            th "Nein!"
+        else:
+            "Der fast schon besiegte Schmerz kehrte zurück, und ich verstand den Wink mit dem Zaunpfahl - offenbar ist da etwas drin, das nicht gut für die Psyche ist."
+            "Wie ein Zahn, der von Schmerz durchbohrt ist, schreckte ich vor diesem Teil der Erinnerung zurück."
+            "Nicht jetzt. {w}Nicht jetzt."
+            stop ambience fadeout 1
+            scene bg ext_road_day with flash
+        $ renpy.music.set_volume(1.0, delay=2, channel='music')
+        play ambience ambience_camp_entrance_day fadein 3
+        play music music_list["trapped_in_dreams"] fadein 3
+        th "Ich werde es mir merken, wenn ich es brauche. {w}Im Moment habe ich dringendere Dinge zu tun."
+        "Ich habe geschlafen, das weiß ich genau - das Mädchen kam wieder zu mir und fragte, ob ich mit ihr gehen würde."
+        "Und hier bin ich. {w}Also, hier bin ich."
+        th "Wer ist dieses Mädchen?{w} Und was könnte sie von mir wollen?"
+        "Die Gedanken an sie verscheuchten den Schmerz, und die Tamtams zogen sich von seinen Schläfen zurück."
+        "Es gab zwar keine Antworten, aber es war ein bisschen einfacher."
+        pause(1)
+        scene bg ext_bus with dissolve
+        th "Ist sie diejenige, die mich hierher gebracht hat?"
+        th "Einfach so, nachdem sie die Zustimmung erhalten hatte, nahm sie es und brachte es zurück in ihren Schlaf? {w}Wie ist das möglich?"
+        "Die Stimme..."
+        "Es klang, als käme es von weit her, und ich konnte die Worte kaum verstehen."
+        scene cg d1_uv_2
+        show prologue_dream
+        with flash
+        "Ihre Lippen berührten fast mein Ohr, und die Wärme ihres Atems fühlte sich sowohl kitzelig als auch angenehm an."
+        dreamgirl "\"...erinnern...\""
+        dreamgirl "\"...auf...\""
+        dreamgirl "\"...omni...\""
+        dreamgirl "\"...ich verspreche...\""
+        scene bg ext_camp_entrance_day with dissolve
+        "Ich warf einen Blick auf das Tor."
+        "Was hier schmerzlich vermisst wurde, war der formschöne Schal in dem kurzen Kleid."
+        "Als ich mich an die Reihe von Reisezielen erinnerte, die ich dem Mädchen vorgeschlagen hatte, anstatt auszugehen, fröstelte es mich."
+        th "Wenn sie sich an sie alle erinnert."
+        th "Okay, stopp."
+        th "Was fällt Ihnen dazu ein? Wünsche im Traum?"
+        th "Wer erinnert sich? An den Traum? An das Mädchen in der Vision?"
+        th "Ich bin sicher, dass es für all das eine rationale Erklärung gibt."
+        "Der Trost war mäßig, aber in Ermangelung eines besseren..."
+        $ alt_pause(1)
+        "Nachdem ich mich mehr oder weniger erholt hatte, machte ich mich auf den Weg zum Tor."
+        "Was auch immer sie verbergen - es gibt eindeutig Menschen, die mehr über ihre Umgebung wissen als ich."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    return
+
+label alt_day1_arrival:
+    play music music_list["my_daily_life"] fadein 5
+    play ambience ambience_camp_center_day fadein 0
+    scene bg ext_clubs_day with dissolve
+    "Vor dem Tor befand sich... ein Pionierlager."
+    "Erstaunlich, nicht wahr?"
+    "Alles ist neu, frisch. Die Betonplatten, mit denen der Weg gepflastert war, waren noch nicht geschlagen, obwohl hier und da schon etwas Grün sprießte."
+    "Und was mich an solchen Orten immer beeindruckt hat, sind die Häuser, die sich mit erstaunlicher Handwerkskunst in die Natur einfügen."
+    "Die ungestörten jahrhundertealten Kiefern, die Rauheit der Landschaft, die zur Kulisse geworden sind..."
+    "Zu beiden Seiten des Weges befanden sich einige kleine Gebäude, die ebenso schäbig aussahen, aber das Gebäude auf der rechten Seite war fest verschlossen, und die Tür wurde vollständig von einer Feuertafel mit Wanzen, konischen Eimern und einem roten Feuerlöscher eingenommen."
+    "Das Gebäude auf der linken Seite war dagegen viel interessanter."
+    "Dem Schild nach zu urteilen, handelte es sich um ein Gebäude mit Hobbykreisen. {w}Oder, wie die Verfasser des Schildes anmaßend erklärten, \"Clubs\"."
+    play sound sfx_open_door_clubs fadein 0
+    pause(1)
+    "Und was noch wichtiger ist, es war ein Mädchen dabei."
+    "Eine weitere Schönheit an diesem verstörenden Ort."
+    show un normal pioneer far at left with dissolve
+    if (counter_sl_7dl == 1):
+        "Sie lächelte meine Begleitung an, stockte aber ein wenig, als sie meinen Blick abfing."
+    else:
+        "Aber im Gegensatz zu dem aktiven Fremden, der mich am Eingang bedrängt hatte, wirkte dieser bedrückt und misstrauisch."
+        "Und er hatte es überhaupt nicht eilig, Kontakt aufzunehmen."
+        "Außerdem mischte sich vieles, wenn wir uns Auge in Auge gegenüberstanden."
+    show un shy pioneer far at left with dspr
+    "Sofort runzelte sie die Stirn und errötete fast bis zu den Tränen."
+    "Ich meine es ernst! Ihre Augen funkelten."
+    show un smile pioneer far with dspr
+    "Das Mädchen blickte verlegen auf den Boden und lächelte ungläubig."
+    th "Hat sie mich gerade angelächelt?"
+    show un normal pioneer far with dspr
+    "...und dann verbarg sie ihr Lächeln und ließ mich mit der Frage zurück, ob ich es mir nur eingebildet hatte."
+    th "Nun, ja, so fängt es an - zuerst kommt es mit einem Ikarus aus dem Winter, dann fällt es mit einer Rate von einem Anhängsel pro Minute."
+    th "Und dann das Übliche - ein fröhliches Haus mit gelben Wänden, höflichen Pflegern und einem Cardin-Hemd mit Krawatte im Rücken."
+    "Ich stand fast wie erstarrt da und überlegte, ob ich mich ihr nähern sollte, auch auf die Gefahr hin, sie zu verschrecken, oder ob ich ihr die Initiative überlassen sollte?"
+    "Ehrlich gesagt wäre es am höflichsten, wenn Sie jetzt gehen würden."
+    "Ich selbst wäre mir sehr dankbar, wenn ich in dieser Situation wäre."
+    th "Aber warum laufen meine Beine dann nicht?!"
+    show us grin sport far at right with dissolve
+    play sound sfx_bush_leaves
+    pause(2)
+    play music music_list["i_want_to_play"] fadein 5
+    show us grin sport at right with dissolve
+    "Die Stille wurde immer beängstigender, und ich wollte mich gerade räuspern, um das Schweigen zu brechen, als wir unterbrochen wurden."
+    "Das benachbarte Gebüsch knisterte und ein Mädchen sprang auf die Straße!"
+    "Sie war klein, trug ein scharlachrotes T-Shirt mit der Aufschrift \"UdSSR\" und hatte das Gesicht ihrer stets fröhlichen, glücklichen und kämpferischen kleinen Schwester."
+    show us grin sport far at center with move
+    "Rotes bis rotes Haar, zu zwei Raketenschwänzen zusammengebunden, eine schmierige Erscheinung, die sicherlich durch den Abgrund an Arglist, der sich am Grund der blauen Augen auftat, getrübt wurde!"
+    "Aus der Ferne wirkte sie sehr klein und war eindeutig jünger als alle anderen, die ich hier bisher gesehen hatte."
+    if (counter_sl_7dl != 1):
+        "Ich war kurz davor, das mögliche \"mekani\" aufzugeben und mir den Weg auf der Karte zu verdeutlichen, als das neue Mädchen zu dem grünäugigen Mädchen hinaufsprang und anfing, etwas zu sagen, wobei sie in bester italienischer Tradition mit den Händen winkte."
+    else:
+        "Ich wollte etwas sagen oder fragen, aber ich hatte keine Zeit - \"red\" sprang auf das Mädchen zu und fing an, etwas zu erzählen, wobei sie aufgeregt mit den Händen wedelte."
+    "Sie ihrerseits war verlegen, schaute zu Boden und sagte nichts."
+    if (counter_sl_7dl == 1):
+        show sl normal pioneer at fright with dissolve
+        sl "Ul-ya-na!"
+        show us laugh sport far with dspr
+        us "Ja, Bürgerbeauftragter!"
+        "Die zierliche Frau lächelte aufrichtig."
+        sl "Ul-ya-na!"
+        "Wieder sagte meine Anstandsdame in Silben."
+        show us smile sport far with dspr
+        us "Ach, kommen Sie."
+        show sl laugh pioneer with dspr
+        sl "Tun Sie nicht so, als ob Sie alles schon wüssten."
+        show us sad sport far with dspr
+        us "Boo-boo-boo, du langweiliger Bastard!"
+        "Die zierliche Frau schmollte und lockerte ihre Handfläche."
+        "Von dort aus flog etwas Längliches, Grünes und knisternd Fliegendes augenblicklich in den Zenit."
+        th "Ist das ein Grashüpfer?!"
+        "Das rothaarige Mädchen stampfte mit dem Fuß auf, zeigte uns ihre Zunge und flog davon."
+        hide us with easeoutright
+        "Das grünäugige Mädchen stand einen Moment lang da und kam zur Besinnung - offenbar wurde ihr klar, wovor sie gerade gerettet worden war."
+        play sound sfx_open_door_1
+        hide un with diam
+        "Nachdem sie etwas Unverständliches herausgepresst hatte, wandte sie sich wieder an die Clubs."
+    else:
+        "Interessiert trat ich einen Schritt näher und versuchte zu hören, worüber sie sprachen."
+        show un normal pioneer at center
+        show us laugh sport at right
+        with dissolve
+        "Wahrscheinlich hätte ich ihren unterhaltsamen Dialog weiter verfolgt, aber die \"UdSSR\" zog plötzlich etwas aus ihrer Tasche und schüttelte es der Traurigkeit ins Gesicht."
+        "Das \"Etwas\" war ein Grashüpfer. {w}Nein. Heuschrecken. Riesig!"
+        "Um ehrlich zu sein, hätte ich selbst Angst, wenn man mir so etwas vor die Nase setzen würde."
+        stop ambience fadeout 2
+        scene cg d1_grasshopper with dissolve
+        "Die \"Traurigkeit\" hat nicht enttäuscht!"
+        un "Eeeeeeeeeeeeeeeeeeeeee!"
+        "Sie quietschte und rannte sofort los."
+        scene bg ext_clubs_day
+        show us grin sport at left
+        with dissolve
+        "Die \"UdSSR\" zwinkerte mir zu, lächelte verschmitzt und eilte ihr nach."
+        hide us with easeoutright
+    stop music fadeout 2
+    $ persistent.sprite_time = "day"
+    $ day_time()
+    hide un with dissolve
+    play ambience ambience_camp_center_day fadein 3
+    "Das ist ein guter Anfang, was soll ich noch sagen?"
+    if (counter_sl_7dl == 1):
+        "Ich warf einen Blick auf meine Reisebegleiterin, aber sie lächelte gelassen."
+    th "Okay... O-okay. {w}Ich verstehe und akzeptiere die Regeln - Pionierarbeit, Tradition, Streiche und Grashüpfer in meiner Faust."
+    th "Werde ich auch kurze Hosen tragen müssen? Oder wird mich endlich jemand durch die Listen führen und mich entschuldigend in mein Heimatland zurückbringen?"
+    "Es scheint jedoch, dass Olga Dmitrievna für die Inspektionen zuständig ist."
+    "Dann muss ich sie kennenlernen."
+    if (counter_sl_7dl == 1):
+        "Die Blondine zerrte ungeduldig an meinem Arm, und ich fügte mich."
+    else:
+        "Seufzend machte ich mich auf die Suche nach dem Mädchen, das weggelaufen war."
+    scene bg ext_square_day with dissolve
+    play music music_list["get_to_know_me_better"] fadein 3
+    if (counter_sl_7dl == 1):
+        "Und seltsame, unartikulierte Gedanken schlichen sich in meinen Kopf."
+        th "Das Mädchen."
+        th "Niedlich."
+        "Ich habe noch nie eine solche Schönheit im wirklichen Leben gesehen, und auf dem Bildschirm würde ich denken, sie sei mit Photoshop bearbeitet worden!"
+        if loki:
+            "Xana könnte es wahrscheinlich mit ihr aufnehmen...."
+            "Aber dafür müsste man fünf oder sechs Jahre zurückgehen, das magische Alter \"zwischen fünfzehn und dreißig\"."
+        th "Meine Hand halten... {w}Ich frage mich, wenn wir die Chance hätten, uns besser kennen zu lernen - würden wir etwas erreichen?"
+        "Ich war nicht sehr optimistisch, meine Attraktivität grenzte an den Rand des Sockels, aber Dinge passieren!"
+        show sl smile pioneer with dspr
+        sl "Konzentrieren Sie sich nicht so sehr auf meinen Hinterkopf."
+        "Der Fremde lachte."
+        sl "Wir bringen dich zum Berater und dann werden wir sehen."
+        sl "Soll ich dir später das Lager zeigen?"
+        "Ohne meine Antwort abzuwarten, bog sie in einen schmalen Pfad ein, der offenbar mit einer spürbaren Verringerung führte, und hielt einige Minuten später in der Nähe eines auffälligen Häuschens an."
+        stop music fadeout 4
+        stop ambience fadeout 6
+        return
+    else:
+        "Und wie viel heller ist diese Realität als meine!"
+        "Wenn ich jetzt vergleiche, kommt es mir vor, als hätte ich einen farblosen Traum gehabt oder mir alles, was mir vor dem Bus passiert ist, nur ausgedacht."
+        th "Falsches Gedächtnis."
+        "Was sollen wir jetzt tun?"
+        "Erst jetzt begann ich zu begreifen, dass mir etwas Unglaubliches widerfahren war, und mein Nervensystem wurde von der ganzen Erfahrung so stark belastet, dass mir die Hände zitterten."
+    if not loki:
+        "Meine Freundin - damals, als sie noch eine war - nannte mich bei unserem letzten Streit einen Idioten. {w}Und jetzt denke ich, dass sie allen Grund hatte, das zu denken."
+    else:
+        "Xana - vor langer Zeit, als sie noch ein Wörtchen mitzureden hatte - hat sich immer beschwert, ich sei zu gefühlskalt. {w}Deshalb ist sie auch so..."
+    "Es ist also nicht die Furchtlosigkeit, die an meiner ruhigen Wahrnehmung schuld ist, sondern dass sie mich einfach nicht erreicht hat."
+    "Aber wenn es sofort gekommen wäre..."
+    "Der Gedanke an ein mögliches Bild von mir, wie ich mich in stiller Hysterie im Gras wälze, ließ mich erschaudern. Ein Albtraum."
+    scene bg ext_houses_day with dissolve
+    "Ich bemerkte kleine Häuser auf der anderen Seite des Platzes und bog dorthin ab."
+    "Es ist nicht so wichtig, ob ich die Angst besiegt habe oder nicht wusste, dass ich Angst haben sollte - ich muss mich mit Würde verhalten und dem hohen Titel eines Vertreters meiner Heimatstadt gerecht werden."
+    "Ich ging den gepflasterten Weg entlang, blinzelte gegen die Sonne und betrachtete interessiert die \"Fässer\" - halbrunde Gehäuse mit einer Tür und einem Fenster, die mit einer Wellblechplatte abgedeckt sind."
+    "Es war zu nobel für Pioniere. {w}Ich persönlich musste in einer Baracke für vierzig Personen wohnen, die in vier Schlafräume unterteilt war - Mädchen im linken Flügel, Jungen im rechten Flügel."
+    "Deshalb habe ich eine etwas andere Meinung über das Leben der Pioniere als das, was ich hier sehe. {w}Auf jeden Fall gibt es hier keine Schlafsäle, und das ist auch nicht schlimm."
+    "Was die Routinen betrifft..."
+    play sound sfx_punch_medium
+    with vpunch
+    play music music_list["that_s_our_madhouse"]
+    "Ich hatte keine Zeit, darüber nachzudenken - ein harter Schlag zwischen meine Schulterblätter brachte mich aus dem Gleichgewicht und ließ mich den Rest meiner Gedanken verlieren."
+    me "Was zum..."
+    dv "Da ist er! Ich habe ihn gefunden!"
+    "Ich hatte keine Zeit zu reagieren, als sich mein Hals in einem komplizierten Griff verfangen hatte, der mich daran hinderte, mich zu bewegen oder gar frei zu atmen."
+    "Verständlicherweise war ich bereits spät dran für meine Schicht."
+    show dv smile pioneer2 close with dissolve
+    "Als ich mich umdrehte, sah ich, dass ich von einem Mädchen gehalten wurde, das ich bereits kannte - dasselbe Mädchen, das am Bus gewesen war, als ich aufwachte."
+    "Robust, aber wie alle Mädchen in ihrem Alter, wiegt sie ein bisschen mehr als nichts. Sie können also..."
+    if herc:
+        $ lp_dv += 1
+        dv "Komm schon, lass uns gehen!"
+        show us laugh2 sport far at right with dspr
+        us "Ich komme ja schon!"
+        "Eine Kinderstimme, die keucht, als würde ihr Besitzer etwas Schweres tragen... {w}"
+        th "Eimer!"
+        "Ich habe geraten."
+        "Ich erinnerte mich daran, was man mir im Unterricht beigebracht hatte, trat einen Schritt zurück und fasste den Rotschopf um die Taille."
+        "Und anstatt einen schmerzhaften Griff zu machen, habe ich sie einfach über meine Schulter geworfen....."
+        show bg ext_houses_day at running
+        "...und laufen!"
+        dv "Oh!"
+        show dv surprise pioneer2 close at left with moveoutleft
+        dv "Was machst du da, du Verrückter?! Lass los!"
+        "Sie hatte offensichtlich nicht mit einer solchen Reaktion gerechnet und schlug mit den Fäusten auf meinen Rücken, um sich zu befreien."
+        "Ich grinste nur und verstärkte meinen Schritt."
+        dv "Hörst du mich nicht?!"
+        scene bg ext_path_day
+        show dv surprise pioneer2 at left
+        with flash
+        pause(1)
+        play sound sfx_alisa_falls
+        me "Los geht\'s!"
+        "Die Verfolgungsjagd wurde abgebrochen, und ich ließ das Mädchen auf den Boden fallen."
+        "Ich lächelte breit und schlug meine Handflächen vorwurfsvoll zusammen:"
+        me "Kann ich jetzt gehen?"
+        "Das Mädchen schwieg, anscheinend immer noch leicht geschockt, und ich nahm das Schweigen als ein Zeichen der Zustimmung, drehte mich um und wollte gerade gehen...."
+        us "Ergreift ihn!"
+        show us smile sport far at center with dissolve
+        "Die Stimme des kleinen Mädchens kam mir bekannt vor. Ich drehte mich um und sah, wie sie keuchend einen mit Wasser gefüllten Feuereimer schleppte."
+        show us smile sport with dspr
+        me "Mir gefällt es hier!"
+        "Ich zwinkerte der rothaarigen Seniorin zu, schmierte mir sofort die Skier und flüchtete vor dem kleinen Terroristen mit dem Eimer."
+        hide us
+        hide dv
+        with dissolve
+    elif loki:
+        $ lp_dv += 1
+        $ karma -= 10
+        play sound sfx_punch_medium
+        with vpunch
+        me "Hey... {w}kh... {w}Lass los, du Verrückter... {w}Du wirst ersticken."
+        dv "Nichts!"
+        play sound sfx_punch_medium
+        with vpunch
+        "Die Schlägerin, die mich festhielt, dachte nicht daran, ihren Griff zu lockern."
+        me "Ich... {w}mich... {w}für die Verspätung."
+        dv "Wirklich? {w}Sie wollen sich einen Strafzettel geben?"
+        dv "Sie lügen nicht?"
+        "Sie zögerte, aber einen Mann zu sehen, der sich mit einem Feuereimer begießt, schien etwas zu sein, das sie unbedingt tun wollte."
+        play sound sfx_punch_medium
+        with vpunch
+        me "Also... {w}fangen... {w}wenn... {w}lügen."
+        dv "Ja."
+        "Sie lockerte ihren Griff und nickte der nun vertrauten \"UdSSR\" zu, die einen roten konischen Eimer, der bis zum Rand mit trübem Wasser gefüllt war, aus einer Feuertonne zog."
+        dv "Unser Rookie will seinen eigenen Elfmeter schießen! Geben wir ihm eine Chance!"
+        "erklärte die Banditin, und ich konnte sie endlich richtig ansehen."
+        th "Sie ist in Ordnung!"
+        "Rote Haare, nicht rot wie in der UdSSR, sondern eher kupferfarben."
+        "Bernsteinfarbene Augen, eine gewisse Arroganz, eine gewisse Röte - ganz allgemein erkannte ich sofort, dass ich einen echten Draufgänger vor mir hatte."
+        us "Sind Sie sich da sicher?"
+        show us laugh2 sport at right with dissolve
+        dv "Nein."
+        "Die rothaarige Seniorin leckte sich über die Lippen."
+        dv "Aber wir werden ihn fangen, wenn es sein muss, oder?"
+        show us smile sport at right with dissolve
+        us "Genau!"
+        us "Jetzt bin ich..."
+        "Ich nahm den Eimer in meine Hand..."
+        me "Demütigung zweiten Grades!"
+        play sound sfx_water_emerge
+        "...und eine riesige Welle überspülte sie beide auf einmal!"
+        $ lp_dv += 1
+        show dv shocked pioneer2 at center
+        show us fear sport at right
+        with dspr
+        me "Wie gefällt Ihnen meine Strafe?!"
+        "Ich lachte laut auf, drehte mich um und schmierte sofort meine Skier."
+        us "Schummler! Fangt den Schummler!"
+        dv "Ergreift ihn!"
+    else:
+        $ lp_dv -= 1
+        $ lp_sl += 1
+        "Ich zuckte, so fest ich konnte."
+        "Vergeblich!"
+        dv "Komm schon, lass uns gehen!"
+        show us laugh2 sport far at right with dspr
+        us "Ich komme ja schon!"
+        "Eine Kinderstimme, die keucht, als würde ihr Besitzer etwas Schweres tragen... {w}"
+        me "Ahhhh... Lasst mich los, ihr Bastarde!"
+        "Ich zuckte zusammen und versuchte, mich zu befreien, denn ich wusste bereits, was jetzt passieren würde."
+        "Vergeblich!"
+        show us laugh2 sport at right behind dv with dspr
+        "Der rothaarige Gegner drückte nur noch fester auf meinen Hals und schnitt mir den restlichen Sauerstoff ab."
+        play sound sfx_water_emerge
+        pause(1)
+        stop music fadeout 3
+        "Es blieb nichts anderes übrig, als sich zu erniedrigen und die Demütigung zu akzeptieren."
+        "Eine weitere Demütigung in einem neuen Team. Was hat die Liebe zu den Menschen damit zu tun?"
+        dv "Willkommen im Camp!"
+        "Ein geworfener Eimer klapperte neben mir und das Lachen war weg."
+        "Zweistimmiges Gelächter, doppelt beleidigt darüber, ausgelacht zu werden."
+        hide dv
+        hide us
+        with dissolve
+        "Rothaarige Schlampen."
+        "Das Leben ist vorbei, oh, diese grausame, grausame Welt....."
+        "Es ist so weit gekommen: Ich, eine große, gesunde Stirn von fast dreißig Jahren - verdreht und mit Wasser übergossen von zwei jugendlichen, ungezogenen Mädchen!"
+        with fade2
+        "Ich winkte mit der Hand und grinste."
+        th "Es ist deine Schuld, es ist deine Schuld."
+        "In der Nähe gab es eine vielversprechende Bank, auf der ich mich niederließ, nachdem ich zuvor meinen Pullover ausgewrungen hatte."
+        play music music_7dl["so_cold"] fadein 3
+        "Sie trocknen!"
+        "Zum Glück hatte ich als Superheld von \"Loser Man\" ein Krisenpaket für solche Momente der drohenden Demütigung."
+        "Ein bisschen Selbstironie, ein bisschen schwarzer Humor und ein Hauch von Selbstironie."
+        "Man muss nur die richtige Asana nehmen und anfangen, das Tao zu begreifen."
+        "Alleine."
+        "Es ist keine Überraschung, dass ich auch in meiner neuen Wohnung immer in alle möglichen Schwierigkeiten gerate."
+        "Es muss eine besondere Eigenschaft geben, die es manchen Menschen ermöglicht, unbeschwert und mit einem Lächeln durchs Leben zu gehen und den heutigen Tag zu lieben - so wie es bei demjenigen der Fall ist, der mich am Tor getroffen hat."
+        "Andere Menschen hingegen werden durch genau diesen Unterschied ständig in dumme Situationen gebracht - ich weiß nicht, wie ich das Geschehen sonst nennen soll."
+        "Zumindest ist es gut, dass ich meinen Mantel ausgezogen habe, sonst wäre es noch schlimmer gewesen, in einem nassen Wintermantel... brrrrr....."
+        "Auch wenn es diese alberne Insektenszene am Eingang gab, habe ich keinen Zweifel daran, dass Streiche, insbesondere solch grausame, hier nicht üblich sind."
+        th "Es ist nur so, dass ich so ein Verlierer bin."
+        "In den Abgründen des Selbstmitleids versunken, habe ich mich völlig von der objektiven Realität abgekoppelt."
+        "So sehr, dass ich zusammenzuckte, als man mir kurzerhand in die Schulter stieß."
+        show sl normal pioneer with dspr
+        sl "Warum sind Sie noch hier?"
+        sl "Habe ich dir nicht gesagt..."
+        show sl surprise pioneer with dspr
+        "Das Mädchen keuchte und schlug sich die Hände vor den Mund."
+        sl "Es wurde also verschüttet?"
+        sl "Warum hast du dich nicht selbst gerettet? Ich habe dich gewarnt!"
+        sl "Ich Armer..."
+        "Sie griff irgendwie ganz natürlich, ganz maschinell nach oben, um meinen Kopf zu streicheln, und ich wich ebenso maschinell aus."
+        th "Du hast gerade den Zen-Genesungsprozess ruiniert, du dumme Blondine."
+        "Verärgert, dachte ich."
+        th "Was zum Teufel machst du mit deinem Mitleid, ich brauche kein Mitleid von einer minderjährigen Pussy!"
+        show sl sad pioneer with dspr
+        sl "Sie sind wieder wütend."
+        "Sie seufzte."
+        th "Und wessen Schuld ist das?"
+        sl "Schweigen Sie nicht zu solchem Hass!"
+        "Auch ihr Damm scheint seine Kapazitätsgrenzen zu haben."
+        me "Ich brauche kein Mitleid. Lass mich in Ruhe, ich trockne mich ab und finde den Weg zurück zum Berater."
+        show sl serious pioneer with dspr
+        sl "Wie? Wie?"
+        th "Dumm oder was? Ein Wort für Blondine."
+        th "Sie gab mir das Auto..."
+        "Ich zog ein bräunliches Etwas aus meiner Tasche, auf dem ich überhaupt nichts mehr erkennen konnte."
+        sl "Das habe ich auch gedacht."
+        "Sie nickte."
+        sl "Aber du darfst nichts Feuchtes tragen, sonst erkältest du dich!"
+        th "Danke, Mama, ich bin satt."
+        sl "Komm, wir stellen dich Olga Dmitrievna vor und suchen etwas zum Umziehen. {w}Los geht\'s!"
+        "Sie sprang auf und zerrte mich hinter sich her."
+    with fade
+    return
+
+label alt_day1_chase1:
+    scene bg ext_square_day at fast_running
+    with flash
+    "Das Getrampel hinter mir hörte nicht auf, aber spontan schob ich meine Beine mit einer Geschwindigkeit, die ich schon lange nicht mehr erreicht hatte."
+    "Herzhaft lachend überquerte ich den Platz in die andere Richtung."
+    "Der Bronze-Attrappe zugewunken...."
+    scene bg ext_aidpost_day at fast_running
+    with flash
+    "...lief an einem Gebäude mit einer Flagge vorbei."
+    th "Rotes Kreuz? Krankenpflegestation?"
+    th "Es wird relevant sein, wenn ich jetzt nicht aussteige!"
+    scene bg ext_dining_hall_away_day at fast_running
+    with flash
+    "Ich habe das Tempo erhöht."
+    "Ich wirbelte an dem Gebäude vorbei - definitiv die Kantine!"
+    scene bg ext_warehouse2_day_7dl with dspr
+    "...und stürzte in eine Art Lagerhaus."
+    stop ambience fadeout 6
+    stop music fadeout 6
+    with fade
+    return
+
+label alt_day1_warehouse:
+    scene bg ext_warehouse2_day_7dl with fade
+    play ambience ambience_camp_center_day fadein 2
+    th "Sieht aus, als wäre es abgegangen."
+    "Das sieht nach einem guten Ort aus, um sich vor Verfolgung zu verstecken. Zumindest im Moment."
+    "Als ich ein gemütliches Plätzchen gefunden hatte, setzte ich mich auf eine Bank, warf meinen nassen Pullover ab und hängte ihn an den Zaun."
+    "Ich habe in meinen Taschen nach Zigaretten gesucht, aber ich konnte keine finden. Das ist schon in Ordnung."
+    th "Ich habe das Gefühl, ich vergesse etwas....."
+    th "Der Mantel! Da ist mein Pass drin und ein paar Hunderter für den Fahrpreis! Wie konnte ich ihn nur im Bus vergessen!"
+    "Aber nach dem herzlichen Empfang im Lager wollte ich wirklich nirgendwo mehr hingehen."
+    th "Ich werde eine Auszeit nehmen."
+    sl "Oh, was machst du hier?"
+    "Eine vertraute Stimme erklang."
+    show sl surprise pioneer with dissolve
+    play music music_list["take_me_beautifully"] fadein 1
+    "Aus einer der Scheunen kam das erste Mädchen, das ich am Tor traf."
+    "Sie sah nicht mehr so ordentlich aus wie früher - ihr Hemd war mit irgendetwas verschmiert."
+    sl "Ich habe dir gesagt, du sollst dem Platz zu den Hütten folgen, und wo bist du hingegangen?"
+    menu:
+        "Wieder ein Zufall?":
+            $ karma += 10
+            $ lp_sl += 1
+            "Ich lächelte."
+            me "Ich schätze, ich folge Ihnen jetzt."
+        "Nun, es kam etwas dazwischen.":
+            sl "Etwas?"
+            "Ich zuckte mit den Schultern."
+            me "Macht nichts."
+    if alt_day1_sl_ignored:
+        sl "Wie geht es Ihnen? Besser?"
+        me "Nun, wie Sie sehen, stehe ich hier vor Ihnen und liege nicht irgendwo mit erhobenen Pfoten."
+        th "Außerdem bin ich auf der Flucht."
+        show sl smile pioneer with dspr
+        sl "Das ist eine gute Sache."
+        "Das Mädchen lächelte."
+        sl "Schön, dass es Ihnen besser geht."
+    show sl surprise pioneer with dissolve
+    sl "Oh, ich habe mich nie vorgestellt."
+    show sl smile pioneer with dspr
+    $ meet('sl','Ruhm')
+    sl "Mein Name ist Ruhm! Eigentlich ist mein voller Name Ruhmna, aber alle nennen mich Slavey."
+    $ alt_day1_sl_met = True
+    "Sie nickte aufmunternd."
+    sl "Sie tun es auch."
+    me "Ja."
+    show sl smile2 pioneer with dspr
+    sl "Warte einen Moment auf mich, ja? Ich habe noch etwas zu tun, und wir gehen zusammen zu Olga Dmitrievna."
+    hide sl with dissolve
+    "Ich nickte."
+    "Nach diesen Worten verschwand sie im Innern des Lagers, und ich schaffte es endlich, meine schweren Winterstiefel auszuziehen, sie wie in meiner Kindheit mit Schnürsenkeln zu binden und sie mir über die Schulter zu werfen."
+    "Ich vertrieb mir die Zeit bis zu Slavis Rückkehr damit, über die {i}Pioniere{/i} nachzudenken, die ich getroffen hatte."
+    "Im Großen und Ganzen verhielten sie sich alle ganz normal: das Mädchen, das sich vor den Heuschrecken fürchtete, der freche Ruhm, die beiden Banditen - sie alle verhielten sich so, wie es sich für Kinder in einem Pionierlager gehört."
+    "Von einem heimtückischen Plan war keine Spur zu finden, auch nicht von der finsteren Absicht dessen, der mich hierher geworfen hatte."
+    "Aber sie ist notwendig."
+    "Die Menschen ziehen nicht einfach vom Winter in den Sommer um."
+    "Bisher dachte ich, dass solche Dinge nur auf den Seiten eines Fantasy-Romans oder in Filmen passieren können, aber jetzt befand ich mich im Epizentrum der Ereignisse."
+    "Und es ist nicht klar, ob es aus einem bestimmten Grund geschah, dessen oberste Absicht mir noch nicht klar ist, oder einfach - unter dem Diktat des Zufalls."
+    sl "Sollen wir?"
+    show sl smile pioneer with dspr
+    me "Los geht\'s..."
+    "Ich schnappte mir meinen Pullover vom Zaun und antwortete."
+    "Ihr Verhalten mir gegenüber... Um die Wahrheit zu sagen, ich hatte vergessen, wann sich jemand nur um mich kümmerte."
+    "Umso wärmer war es, dass sie versuchte, zu helfen."
+    th "Das ist doch alles ziemlich verdächtig, oder?"
+    stop ambience fadeout 6
+    stop music fadeout 3
+    pause(3)
+    play ambience ambience_camp_center_day fadein 3
+    scene bg ext_houses_day
+    show sl normal pioneer
+    with dissolve
+    if herc:
+        "Ein Ort, der fast Zeuge meiner Schande wurde."
+        "Ehrlich gesagt, hätte ich nicht erwartet, dass ich so schnell sein würde!"
+        "Ich würde lügen, wenn ich sagen würde, dass ich die Situation nicht mag."
+        me "Hier haben sie versucht, es mir anzuhängen."
+        sl "Ist das so? Wer?"
+        me "Ich weiß nicht, woher ich das weiß. Zwei Rothaarige, einer älter, einer jünger, beide mit Schwänzen."
+        show sl laugh pioneer with dspr
+        sl "Und du hast dich mit Alice gut geschlagen, nicht wahr? Und wie?"
+        me "Ich habe mich daran erinnert, dass Mädchen in den Arm genommen werden müssen."
+        "Ich lächelte."
+    elif loki:
+        "Wir gingen zurück zu dem Ort, an dem ich meinen Lauf begonnen hatte."
+        "Das Böse in den Gesichtern der beiden rothaarigen Plagegeister wurde bekämpft, und ich konnte mir ein Lächeln nicht verkneifen."
+        sl "Worüber lächelst du, Semjon?"
+        sl "Sag mir nicht, dass du mich nicht einmal ansiehst."
+        "Auch ein roter, konischer Eimer lag herum, den Ruhm kopfschüttelnd aufhob und an den Haken des nächstgelegenen Feuerschildes hängte."
+        me "Ich weiß nur, woher dieser Eimer stammt und warum das Wasser verschüttet wurde."
+        sl "Wissen Sie etwas?"
+        me "Sagen wir einfach, ich habe anderen Menschen das angetan, was sie mir antun wollten."
+        show sl laugh pioneer with dspr
+        "Ruhm lachte leise und stellte nichts in Frage."
+    "Wir bogen bei der nächstgelegenen Hütte ab und kamen, nachdem wir die improvisierte Straße entlanggegangen waren, zu einer anderen Hütte, deren Besonderheit sofort auffiel."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day1_mod_tan:
+    scene bg ext_house_of_mt_day with fade
+    show sl normal pioneer
+    with dissolve
+    play music music_list["smooth_machine"] fadein 2
+    "Das Haus war lustig - so wie es Kinder normalerweise zeichnen: dreieckig, mit einer Tür."
+    "Er und die Fliedersträucher, die sich ihren Platz zurückerobern, bilden ein Stillleben von erstaunlicher Schönheit, das eines jeden Künstlers würdig ist."
+    th "Oder Landschaft?"
+    sl "Was stehst du da? Los geht\'s!"
+    if alt_day1_sl_met:
+        "Es war Ruhm, der mich aus meinen Grübeleien herausholte."
+    else:
+        "Das Mädchen holte mich aus meinen Grübeleien heraus."
+    with fade
+    if (counter_sl_7dl == 1):
+        if herc or loki:
+            "Hier kam mir ein Gedanke, den ich hätte äußern sollen....."
+            "Wenn auch nur aus Höflichkeit!"
+            me "Ähm ..."
+            "Ich runzelte die Stirn."
+            me "Nicht, dass ich darauf bestanden hätte."
+            me "Aber wir sind uns noch nicht begegnet, nicht wahr?"
+            show sl laugh pioneer at center with dissolve
+            "Sie lachte."
+            sl "Sie haben recht, tut mir leid."
+            sl "Mein Name ist Ruhmnoi."
+            $ meet('sl','Ruhm')
+            $ alt_day1_sl_met = True
+            me "Ich verstehe."
+            "Ich bin still."
+            "Und hat lange geschwiegen."
+            "Bis die Geduld des Mädchens zu Ende war."
+            show sl serious pioneer with dspr
+            sl "Würden Sie nicht sagen, dass es ein Vergnügen ist?"
+            th "Oh, das ist schön."
+            th "Finde ich es gut oder nicht?"
+            me "А. Ja."
+            "Ich stimmte zu."
+            show sl shy pioneer with dspr
+            "Nachdem sie eine Weile gewartet hatte, winkte das Mädchen mit der Hand - offenbar war ihr klar, dass sie mit mir keinen Brei kochen konnte."
+        play sound sfx_knock_door7_polite
+        pause(2)
+        mt "Es ist offen!"
+        if herc or loki:
+            sl "Alle im Camp nennen mich Ruhm."
+            sl "Nur für den Fall, dass Sie sich wundern."
+            "Ohne meine Antwort abzuwarten, stieß sie die Tür auf, und ich hatte keine andere Wahl, als ihr zu folgen."
+        stop ambience
+        play sound sfx_open_dooor_campus_1
+        play ambience ambience_int_cabin_day fadein 1
+        scene bg int_house_of_mt_noitem_day_7dl
+        show mt normal pioneer
+        with dissolve
+    else:
+        if dr:
+            "Ohne viel Zeit zum Nachdenken zu lassen, zerrte mich meine Anstandsdame mit."
+            show us laugh sport at left with dissolve
+            "Fehlt im Türrahmen mit...."
+            "Ich habe mich bemüht, keine Kraftausdrücke zu benutzen."
+            hide us with easeoutleft
+            sl "Mach dir keine Sorgen, jetzt, jetzt...."
+        else:
+            "Wir wollten gerade anklopfen und hineingehen, aber....."
+            "Aus dem Inneren des Hauses erklangen unbekannte Stimmen."
+            mt "Wage es nicht, dich über Lena lustig zu machen, hast du verstanden?!"
+            voice "Nun, alte Herrin..."
+            mt "Ich frage Sie, ob Sie das verstehen?"
+            "Der Betreuer schreit jemanden an."
+            "Das Bild ist so alt wie die Welt, und es ist doppelt befriedigend, von jemand anderem gekreuzigt zu werden."
+            if herc:
+                "Vor der Lodge waren ein paar Liegen aufgestellt, und ich kletterte sofort auf eine von ihnen, wobei ich einen sehr gut platzierten Zapfen aufhob."
+            else:
+                "Vor der Lodge waren ein paar Liegestühle aufgestellt, und ich kletterte sofort auf einen von ihnen, um mich vor der Sonne zu verstecken."
+            if alt_day1_sl_met:
+                "Ruhm setzte sich auf einen Platz in der Nähe und lächelte leise als Antwort auf einen fragenden Blick."
+            th "Klingt, als hätte die Beraterin viel um die Ohren. Aber wenn ich mir die quirlige Babystimme so anhöre, überrascht mich das nicht."
+            play sound sfx_open_door_kick
+            with vpunch
+            show us smile sport at right with dissolve
+            "Einen Moment später schwang die Tür auf und ein Mädchen in einem \"UdSSR\"-T-Shirt trat heraus."
+            if herc:
+                th "Das Ziel ist gefangen."
+                "Wie ich es wusste, nahm ich eine Tüte in die Hand."
+                "Das Projektil traf das Mädchen zwischen den Schulterblättern."
+                show us dontlike sport at right with dspr
+                us "Hey! Was machst du da?"
+                "Sie sah mich verärgert an."
+                me "Sind Sie es leid, Wasser zu tragen?"
+                us "Ooh..."
+                hide us with moveoutright
+                "Sie kratzte sich am Rücken, warf mir einen bösen Blick zu und rannte davon."
+            elif loki:
+                "Ich erkannte das Opfer der Überschwemmung sofort und zwinkerte ihr zu. Sie zwinkerte mir nur unfreundlich zu. Sie hatte offensichtlich etwas Schlimmes vor."
+                me "Hallo, mein Schatz! Wie war dein Bad?"
+                show us dontlike sport at right with dspr
+                us "..."
+                hide us with moveoutright
+                "Sie drehte sich um und verschwand hinter den Häusern."
+            play sound sfx_open_dooor_campus_1
+            show un normal pioneer far at left with dspr
+            "Es folgte \"Sadness\"."
+            th "Lena, glaube ich?"
+            sl "Lena, kümmere dich nicht um sie, sie wird es schon lassen."
+            $ meet('un','Lena')
+            "Ermutigt Ruhm."
+            th "Also, Lena. Schön, dich kennenzulernen."
+            un "Ich weiß nicht..."
+            show un normal pioneer at left with dspr
+            "Sie ging ein paar Schritte und bemerkte mich erst dann."
+            show un shy pioneer at left with dissolve
+            "...und stammelte sofort ein halbes Wort."
+            "Ich glaube, ich habe sie in Verlegenheit gebracht."
+            "Errötend starrte das Mädchen auf den Boden und versuchte, so schnell wie möglich außer Sichtweite zu kommen."
+            hide un with moveoutleft
+            "Ich drehte mich um und warf ihr einen nachdenklichen Blick zu."
+            th "Ich frage mich, ob sie schon immer so war oder ob es an meinem verderblichen Einfluss liegt?"
+            show sl normal pioneer at center with dspr
+            sl "Sie warten auf uns, los geht\'s!"
+        play sound sfx_knock_door7_polite
+        pause(2)
+        mt "Es ist offen!"
+        stop ambience fadeout 5
+        play sound sfx_open_dooor_campus_1
+        pause(1)
+        play ambience ambience_int_cabin_day fadein 1
+        scene bg int_house_of_mt_noitem_day_7dl
+        with dissolve
+
+    "Innen sah die Kabine genauso aus wie erwartet: zwei Betten, ein Tisch, Stühle, ein paar Schränke und ein Poster des unvergleichlichen Jean Marais als Fantomas."
+    "Nichts Übernatürliches, obwohl dieses Haus genauso unordentlich war wie meine Wohnung."
+    show mt normal pioneer far with dissolve
+    "Ein Mädchen, etwa in meinem Alter, stand am Fenster und las etwas in ihrem Tagebuch."
+    "Und natürlich hat die Natur ihr, wie allen anderen schönen Frauen, die ich hier getroffen habe, weder Gesicht noch Figur genommen."
+    th "Wenigstens ist es gut zu wissen, dass ich in der Gesellschaft schöner Frauen sterben werde. Falls ich das tue, natürlich."
+    show mt normal pioneer with dspr
+    mt "Ach, da sind Sie ja."
+    if dr and (counter_sl_7dl != 1):
+        "Sie betrachtete meine Kleidung skeptisch und schüttelte den Kopf."
+        mt "Du wurdest doch verschüttet. In Ordnung, Ruhm wird etwas für dich finden. Schmeiß es einfach weg, solange es noch roh ist."
+        "Sie ging zurück zum Kleiderschrank, kramte darin herum und fand ein T-Shirt in Untergröße - offensichtlich aus einem Geschäft für sehr große Menschen - und warf es mir zu."
+        mt "Ziehen Sie es erst einmal an."
+        th "Und die Hose?"
+        me "Mm-hmm..."
+        mt "Sie können hier eine Weile sitzen. Ruhm, Größe sechsundvierzig irgendwo, besser Größe achtundvierzig."
+        "Das Mädchen nickte und holte ein Notizbuch aus ihrer Tasche, in das sie eifrig meine Maße eintrug."
+        "Ich wischte mich mit dem angebotenen Handtuch ab, und als ich es überzog, war es, als hätte ich ein riesiges Nachthemd an."
+    else:
+        mt "Der Bus ist vor einer Stunde angekommen. Wo warst du die ganze Zeit? Hast du geschlafen?"
+        me "Äh... ja."
+        mt "Du hast alles durchschaut, Schlafmütze."
+    show mt smile pioneer with dissolve
+    mt "Mein Name ist Olga Dmitrievna, und ich bin Ihre Beraterin."
+    $ meet('mt','Olga Dmitrijewna')
+    mt "Mit Slavey sind Sie, glaube ich, bereits vertraut."
+    mt "Sie ist meine Assistentin, also wenn Sie Fragen haben, können Sie sich gerne an sie wenden."
+    show sl smile pioneer at right with dissolve
+    if alt_day1_sl_met:
+        "Ruhm lächelte."
+    else:
+        $ meet('sl','Ruhm')
+        $ alt_day1_sl_met = True
+        "Der besagte Assistent lächelte."
+    "Offenbar fanden sie es sehr lustig. Also beschloss ich, bei dieser Farce mitzuspielen."
+    me "Sie sind also ein Berater. Und ich bin ein Pionier?"
+    show mt angry pioneer at center with dspr
+    mt "Verdrehen Sie nicht die Worte."
+    mt "Du gehörst jetzt zur Truppe, und das bedeutet, dass ich dich zu einem Musterpionier machen muss."
+    me  "Sehen Sie mich an."
+    "Inzwischen habe ich ehrlich gesagt gespottet."
+    me "Sehe ich für Sie wie ein Pionier aus?"
+    show sl normal pioneer at right with dspr
+    "Olga schwieg ein paar Minuten lang und betrachtete nachdenklich mein Gesicht, und als ob das nicht genug wäre, ging Ruhm um mich herum."
+    sl "Korrigieren Sie mich, wenn ich falsch liege..... Aber es ist ähnlich."
+    mt "Das ist auch meine Meinung."
+    me "Okay, Mädels."
+    "Ich habe beschlossen, damit aufzuhören."
+    me "Du hast einen Witz gemacht, ich habe auch gelacht, Zeit, die Sendung zu beenden."
+    show sl serious pioneer at right with dspr
+    sl "Du sprichst. Soll ich einen Arzt rufen?"
+    mt "Gute Idee, Ruhm. Holen Sie Dr. Viola, bitte."
+    show sl surprise pioneer at right with dspr
+    "Ruhm reagierte seltsam auf das Wort \"Arzt\" - sie blickte den Berater an, hob fragend eine Augenbraue."
+    "Doch ohne eine Antwort abzuwarten, ging sie hinaus."
+    hide sl with dissolve
+    me "Welcher Dr. Viola?! Seid ihr alle verrückt?! Kommt schon, das ist nicht mehr lustig..."
+    "Ich zögerte, als Olga zwei schnelle Schritte durch den Raum machte, meine Nase zum Spiegel drehte und mich an der Schulter fasste."
+    stop music fadeout 3
+    me "Oh..."
+    me "...du bist..."
+    me "...ё..."
+    play sound sfx_open_cabinet_2
+    play music music_list["revenga"] fadein 3
+    scene cg d1_me_mirror_casual2_7dl:
+        pause 0.5
+        linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (5,5)
+        linear 0.05 pos (5,0)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (5,5)
+        linear 0.05 pos (0,5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (5,5)
+        linear 0.05 pos (0,5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0,0)
+        linear 0.05 pos (5,5)
+        linear 0.05 pos (0,0)
+    with dissolve
+    "Ich weigerte mich zu glauben, was ich im Spiegel sah."
+    "Unter meinen Fransen sah ich einen Burschen von etwa achtzehn Jahren, der ein wenig kleiner war als ich selbst."
+    "Und ich habe mich gewundert, warum meine Hosen heruntergefallen sind, warum meine Schuhe eine Nummer größer waren...."
+    "Auch das Problem mit den Kopfhörern wurde sofort gelöst."
+    "Es gab nichts mehr zu tun. Nur zu realisieren."
+    me "WAS, ICH?"
+    scene bg int_house_of_mt_noitem_day_7dl
+    show mt normal pioneer at center
+    with dissolve
+    "Die Decke drehte sich und begann nach hinten zu wanken."
+    show blinking
+    pause(3.5)
+    me "Ich weiß nicht, was du mir angetan hast, aber gib mich zurück - mich! Dich! Я..."
+    play sound sfx_punch_medium
+    with vpunch
+    scene anim prolog_1
+    with fade3
+    "Schließlich sprang der Boden auf und schlug mir mit voller Wucht auf meinen armen Kopf."
+    pause(3)
+    stop music fadeout 5
+    mt "Ruhm, wann kommt Violetta Cernovna?"
+    sl "In fünf Minuten, Olga Dmitrievna. Sie sagte, sie müsse etwas Medizin nehmen."
+    mt "Beeilen Sie sich."
+    "Ich schüttelte den Kopf und versuchte, aufzustehen."
+    "Leider hatte mich meine Kraft völlig verlassen, und ich konnte nur noch stumpf an die Decke starren."
+    scene bg int_house_of_mt_noitem_day_7dl with dissolve
+    "Ich spürte, wie meine Finger von jemandem sanft gequetscht wurden."
+    sl "Mach dir einfach keine Sorgen, okay?!"
+    sl "Ich habe bereits die Ärztin angerufen. Sie ist die beste, sie wird dich in kürzester Zeit wieder auf die Beine bringen."
+    cs "Pioniermädchen, trösten Sie den Jungen nicht, das könnte sein Selbstwertgefühl beschädigen."
+    "Eine neue Stimme ertönte im Raum."
+    "Oh, wir haben eine neue Figur. Das lokale Bestiarium ist sehr vielfältig."
+    "Also, wer?"
+    scene bg int_house_of_mt_noitem_day_7dl with dissolve
+    show mt normal pioneer far at left
+    show sl normal pioneer far at right
+    with dissolve
+    play music music_list["eternal_longing"] fadein 5
+    show cs normal with dspr
+    cs "Violetta Cernovna Collider."
+    show cs grin with dspr
+    show cs normal with dspr
+    "Sie hat gezwinkert."
+    cs "Aber für dich ist es nur {i}Viola{/i}. Pionier."
+    $ meet('cs','Viola')
+    show cs normal close with dspr
+    "Ihre Hände fuhren über meinen Körper, prüften meine Reflexe, meine Lymphknoten, meine Atmung.... Obwohl ich hätte schwören können, dass Viola... mich befummelt!"
+    show sl angry pioneer far at right with dspr
+    "Ich errötete heftig. Ruhm, der meine Reaktion sah, schien etwas zu ahnen und sah die Krankenschwester misstrauisch an."
+    sl "Violetta Zernowna, was können Sie uns über den Zustand von Semjon sagen?"
+    cs "Ein normaler, gesunder Pionier. Ein bisschen überhitzt, plus Akklimatisierung."
+    cs "Gönnen Sie ihm ein paar Tage Schlaf und weniger Sonne."
+    "Viola hielt mir den Ammoniak-Tupfer unter die Nase und fasste zusammen." with vpunch
+    cs "Wenn er kommt, geben Sie ihm etwas Brühe - ich werde die Küche anweisen, für Persunov eine separate Brühe zu machen."
+    if herc:
+        th "Persunow? Woher kannte sie meinen alten Nachnamen?"
+    else:
+        th "Woher kennt sie meinen Nachnamen?"
+    cs "Am Abend können Sie Kefir und ein paar Brötchen essen."
+    cs "Und kein frühes Aufstehen. Richtig. Pionier?"
+    show cs grin with dspr
+    show cs normal with dspr
+    "Sie warf mir einen vielsagenden Blick zu und zwinkerte mir erneut zu."
+    me "Ja, das ist richtig. Es ist nicht gut für mich."
+    "Sie warf mir noch einen vielsagenden Blick zu, also beeilte ich mich, mein T-Shirt zurechtzurücken, und verschwand aus der Tür."
+    stop music fadeout 3
+    hide cs with dissolve
+    show sl normal pioneer at right with dspr
+    mt "Ausgezeichnet. Semjon, wenn du zur Vernunft kommst, geh in den Wäscheladen."
+    mt "Bringen Sie Ihre eigene Matratze und Ihr eigenes Bettzeug mit. Ein Pionier muss sich selbst um sein Bett kümmern."
+    "Ich sah Nightingale an."
+    sl "Ich treffe dich dort!"
+    "Nachdem er sich vergewissert hatte, dass meine Gesundheit nicht in Gefahr war, lächelte Ruhm und folgte der Krankenschwester."
+    hide sl with dissolve
+    show mt normal pioneer at center with dspr
+    mt "Ich werde auch gehen."
+    mt "Du kannst erst einmal hier bleiben, dann suchen wir dir eine Bleibe."
+    mt "Vergessen Sie nicht, dass heute Abend ein Abendessen auf dem Programm steht."
+    me "Ähm ... Was hat es mit der Brühe auf sich?"
+    mt "Mach dein Bett und geh in den Speisesaal."
+    "Die Beraterin erklärte ohne zu zögern."
+    mt "Können Sie damit umgehen?"
+    me "Ich werde es ausprobieren."
+    mt "Das ist sehr gut. Ich sehe dich beim Abendessen."
+    hide mt with dissolve
+    "Sie huschte zur Tür hinaus, gefolgt von Slavey."
+    me "Wohin soll ich die Wäsche bringen?"
+    "Ich habe die Leere gefragt. Mit dem erwarteten Ergebnis."
+    if dr and (counter_sl_7dl != 1):
+        "Meine feuchten Klamotten nahmen einen ganzen Kleiderschrank und ein paar Bügel in Beschlag, so dass ich nur noch mein Camping-T-Shirt trug - nicht die beste Kleidung, aber viel besser, als in der Nässe herumzulaufen."
+    else:
+        "Ich hatte meinen Mantel im Bus verloren, also blieb nur mein Pullover - den entledigte ich mich sofort und hängte ihn ans Kopfende des Bettes, zog meine Schuhe aus und schwor mir, entweder richtige Schuhe für das Wetter zu kaufen oder barfuß zu gehen."
+        "Ich blieb in einem Indigo-Denim-T-Shirt und fragte mich, ob es zu provokant wäre, solche Sachen in einem sowjetischen Lager zu tragen."
+        "Nach kurzem Überlegen entschied ich, dass ein T-Shirt im Sommer angemessener wäre als ein Pullover. Sogar mit einer spießigen Aufschrift auf der Brust."
+        th "Immerhin rennt der Kleine in der SS herum, und nichts. Wie kann ich da noch schlimmer sein? Ich werde die Massen an gewebter Baumwolle süchtig machen."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day1_elektron:
+    scene bg ext_houses_day with dissolve
+    play music music_list["everyday_theme"] fadein 3
+    "Nun, Sie können mit vollem Magen nach Antworten suchen."
+    "Wie in dem Sprichwort, dass ein Russe mit leerem Magen weder denkt noch etwas tun will."
+    "Natürlich kann er das nicht, wenn er voll ist."
+    "Ich ging den Weg entlang und jemand rief meinen Namen."
+    el "He!"
+    "Ich sah mich um."
+    show el normal pioneer with dissolve
+    "Wow, das erste männliche Lebewesen, das ich kennengelernt habe."
+    "Ein zerzauster Typ mit ein paar kleinen Sommersprossen. Klassisches mittelgroßes Gesicht."
+    "Wir haben bereits Semyon, also entweder Vasily oder Sergei, ja."
+    if dr and (counter_sl_7dl != 1):
+        el "Du hast vergessen, deine Hose anzuziehen!"
+        "Er teilte."
+        me "Das war böswillig."
+        "stellte ich mürrisch fest."
+        show el surprise pioneer with dspr
+        el "Und? Also gut, dann."
+        "Er schüttelte nachdenklich den Kopf, schüttelte ihn aber sofort wieder ab:"
+        show el normal pioneer with dissolve
+    el "Hallo!"
+    "Er streckte seine Hand aus."
+    el "Schön, Sie kennenzulernen, ich bin Electronics! {w}Der Echte. Du kannst mich so nennen."
+    "Ein echter Mann der Elektronik. {w=.3}Co-{w=.3}noch-{w=.3}aber. {w}Und er versteckt einen 220er Stecker unter seinem Hemd."
+    "Ein Cosplayer oder so? An Idioten mangelt es dem russischen Land nicht."
+    $ meet('el','Elektronik-Techniker')
+    me "Ich verstehe..."
+    el "Uljanka nennt mich auch Cheeseberry."
+    "Seinem verärgerten Gesichtsausdruck nach zu urteilen, gefiel ihm der Spitzname überhaupt nicht."
+    th "Der ist übrigens ziemlich gut. Das ist die Art von Pilzen, die du suchst."
+    el "Das ist mein Nachname. Syroezhkin."
+    me "Das habe ich mir gedacht. Du musst dir nur, ähm. Mach dir keine Sorgen, okay?"
+    "Leider war sein Händedruck so fest, dass ich keine Zeit hatte, ihn zu entziehen. Er war bereits zu einem neuen Thema übergegangen."
+    el "Wie kann ich mir keine Sorgen machen? Wir müssen dir ein Bett bringen und dir so viel im Camp zeigen. Wir sollten uns beeilen."
+    "Er bog nach rechts ab und raste, ohne sich umzusehen, ob ich ihm folgte, in Richtung des Platzes davon."
+    el "Stimmt es, dass Sie in Winterkleidung gekommen sind?"
+    if dr and (counter_sl_7dl != 1):
+        me "Sieht es so aus?"
+        "Ich habe gekichert."
+        el "Nicht so sehr."
+        show el serious pioneer with dspr
+        el "Diese Uljanka plappert wieder!"
+        "Er gab eine ehrliche Antwort."
+        me "Uljanka?"
+        el "Klein, rothaarig, schelmisch!"
+        me "Ach, die."
+        show el normal pioneer with dspr
+        me "Du hörst diesem Blutsauger mehr zu."
+        "Ich fühlte mich in dem behelfsmäßigen Minikleid nicht sehr wohl, was meinen Sinn für Humor beeinträchtigte."
+    else:
+        "Ich schaute mich genau an. T-Shirt, Jeans, und barfuß...."
+        me "Das ist eine Lüge."
+        el "Das habe ich mir gedacht! Es ist wieder Uljanka, die klatscht!"
+        me "Uljanka ist diejenige..."
+        el "Klein, rothaarig, schelmisch!"
+    if (counter_sl_7dl == 1):
+        el "Sie ist nicht sehr gläubig, aber die Mädchen könnten ihr glauben."
+    else:
+        el "Sie sagt, er sei in einem Touloupe gekommen, habe geflucht und sich abscheulich benommen."
+    if dr and (counter_sl_7dl != 1):
+        el "Ich finde, Sie sollten nicht so über den Platz geführt werden."
+        me "Ich unterstütze es!"
+        el "Ein Umweg also?"
+        me "Nochmals unterstützt!"
+    with fade2
+    pause(2)
+    play ambience ambience_day_countryside_ambience fadein 3
+    scene bg ext_warehouse_day_7dl with dissolve
+    "Ein paar Minuten später näherten wir uns einem grauen Schuppen mit einem großen Tor an der Stirnseite."
+    show el grin pioneer with dspr
+    el "Denken Sie nicht, dass das nur die Außenseite ist. Das Innere ist isoliert und sauber. Es geht nicht nur um Unterwäsche, sondern auch um Ausrüstung, Skier und Bälle. Ach so."
+    me "Skifahren? Habt ihr hier auch Winterrennen?!"
+    show el serious pioneer with dspr
+    el "Ich habe noch kein Glück gehabt."
+    show el smile pioneer with dspr
+    el "Man sagt, dass sie hier in der Silvesternacht viel Spaß haben. Sie schmücken Genda, sie bringen einen riesigen blauen Weihnachtsbaum vom Land mit!"
+    show el sad pioneer with dspr
+    el "Eh, das würde ich gerne sehen."
+    me "Wie alt sind Sie? Sie werden sehen."
+    "Er fing an, mit seinem Geschwätz zu nerven, und ich beeilte mich, ihn an den Zweck des Spaziergangs zu erinnern."
+    me "Bringen Sie mich zum Kastellan oder zu demjenigen, der für Ihre Wäsche zuständig ist."
+    "Wir gingen um das Gebäude herum und näherten uns einer Tür, die weit geöffnet war."
+    scene bg int_warehouse_day_7dl with dissolve
+    "Durch sie hindurch konnten wir einen halbdunklen Raum mit drei Etagen von Holzregalen sehen, auf denen jeweils zusammengerollte Matratzen lagen; ein in eine dünne Wolldecke eingewickeltes Kissen war die Füllung."
+    sl "Oh, Leute, wartet. Ich bin gleich wieder da."
+    pause(1)
+    show sl shy sport at center
+    show el normal pioneer at left
+    with dissolve
+    "Einige Minuten später tauchte ein zerzauster und erröteter Ruhm hinter den Regalen auf und zerzauste ihre Kleidung."
+    el "Ähm ... Habe ich etwas verpasst?"
+    "erkundigte sich Elektronik-Techniker behutsam."
+    "Ich stand wie betäubt da, wie immer, wenn ich zufällig in die Geheimnisse eines anderen hineingezogen wurde."
+    show el normal pioneer at left with dspr
+    if dr and (counter_sl_7dl != 1):
+        "Im Moment gibt es jedoch weitaus dringendere Themen."
+        "Ich sah Slawja ausdrucksvoll an, und sie reichte mir das Paket:"
+        sl "Wenn es irgendwo einen Druck gibt, kontaktieren Sie mich bitte: Ich werde es sicher ändern."
+        me "Ich danke Ihnen!"
+        sl "Nimm auch das Bett mit - nimm es erst einmal mit zu Olga Dmitrievna und dann dorthin, wo sie dich hinbringt."
+    else:
+        me "Ich verstehe definitiv etwas nicht. Du hättest mich einfach hierher bringen können und..."
+        sl "...und die Brühe, die Ausgabe der Uniformen, das Bügeln der Hemden, die Festlegung der Zulagen und eine ganze Reihe anderer Feinheiten überwachen?"
+        show sl laugh sport with dspr
+        "Ruhm lachte, als sie meine viereckigen Augen sah."
+        me "Hoppla..."
+        sl "Entschuldigung angenommen. Du kannst das Bett haben, das du willst."
+        me "Ja."
+        sl "Ich bügele und räume die Uniform auf, und du trägst heute Zivilkleidung, okay?"
+        "Ich antwortete ihr mit einem Nicken."
+    show sl surprise sport at center with dspr
+    sl "Oh, das hätte ich fast vergessen!"
+    sl "Welche Fußgröße haben Sie?"
+    me "Fünfundvierzig."
+    show sl normal sport at center with dspr
+    "Ruhm warf mir einen seltsamen Blick zu.{w} Meine Füße, um genau zu sein."
+    th "Ja, nun, was wollte sie denn? Mit meinem..."
+    th "Verdammt!"
+    th "Ich bin jetzt jünger als mein wahres Ich, was ist schon fünfundvierzig?"
+    th "Obwohl es nicht viel anders aussieht."
+    hide sl with dissolve
+    "Als Ruhm meine Verwirrung bemerkte, verschwand er, ohne eine Antwort abzuwarten, hinter den Regalen.{w=0.5}{nw}"
+    show sl smile sport at center with dissolve
+    extend "und kam eine Minute später mit einem Paar Sandalen zurück."
+    "Das ist gut, das ist besser als barfuß zu gehen."
+    "Auch wenn es keine betrunkenen Touristen gibt, die Glasscherben ins Gras werfen, gibt es immer wieder Unebenheiten und Kieselsteine, die mit bloßen Füßen etwas unangenehm zu betreten sind."
+    sl "Probieren Sie es an. Wenn es nicht passt, kaufe ich ein anderes."
+    th "Mit den Augen?"
+    sl "Ziehen Sie die Socken noch nicht an. Du ziehst sie später an, wenn du deine Füße wäschst."
+    th "Danke, Mutti."
+    "Aber Slavi hatte ein gutes Auge - die Sandalen passten."
+    "Ohne Socken war das Gefühl zwar nicht sehr angenehm: Meine Füße klebten an den Sohlen und ich musste mir die Ferse aufreiben, aber es war immer noch besser als barfuß."
+    me "Vielen Dank, Ruhm."
+    sl "Sie können es gerne tragen!"
+    hide sl with dissolve
+    scene bg ext_square_day with dissolve
+    if dr and (counter_sl_7dl != 1):
+        "Ein paar Minuten später, nachdem ich mich umgezogen und aufgeräumt hatte, ging ich auf die Straße, wo Elektronik-Techniker bereits wartete."
+        "Er schien darauf erpicht zu sein, die Tour fortzusetzen."
+    else:
+        "Wenige Minuten später, nachdem ich mein Bett in der Betreuer-Kabine abgeladen hatte, bewegte ich mich bereits in Richtung des Platzes."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day1_meeting:
+    scene bg ext_square_day
+    show el normal pioneer at left
+    with dissolve
+    play music music_list["get_to_know_me_better"] fadein 3
+    play ambience ambience_camp_center_day fadein 3
+    el "Wir beginnen unseren Rundgang auf dem Platz. Dort befinden sich alle unsere Sehenswürdigkeiten, Genda und ...."
+    me "И?"
+    "Ich hob skeptisch eine Augenbraue."
+    el "И..."
+    "Er sah sich verloren um{w=0.5}{nw}"
+    show el laugh pioneer at cleft with dspr
+    extend " - und hellte sich plötzlich auf."
+    el "Und Lena!"
+    el "Sieh mal, Semjon. Lena!"
+    show un normal pioneer far at cright behind el with dspr
+    th "Ich bestreite nicht, dass Lena ein hübsches Mädchen ist. Aber sie ein Wahrzeichen zu nennen..."
+    "Ich unterdrückte ein Glucksen."
+    me "Weiß sie, wie Sie sie gerade getauft haben?"
+    el "Ja, natürlich."
+    show el laugh pioneer far with dspr
+    show un surprise pioneer far with dspr
+    "Er sprang auf das Mädchen zu und plapperte weiter."
+    el "Lena, hallo! Das ist der neue Typ! Komm und lerne ihn kennen."
+    $ meet ('un', 'Lena')
+    with fade2
+    th "Und was soll ich ihr sagen?!"
+    "Panik schoss mir durch den Kopf."
+    me "Hallo."
+    me "Ich glaube, wir kennen uns bereits."
+    show un shy pioneer far with dspr
+    un "Ja..."
+    "Sie schaute mich kurz an und versteckte sich dann hinter dem Buch, wobei sie bis über die Ohren errötete und sich bemühte, unsere Anwesenheit nicht zu bemerken."
+    "Ich lächelte unwillkürlich: So vieles an ihrem Verhalten ähnelt meinem eigenen."
+    "Nein, ich werde nicht rot. Ich bin zu alt für so etwas."
+    "Aber im Allgemeinen liegt der Versuch, sich vor dem Gesprächspartner zu verstecken, nahe und ist für mich verständlich."
+    show cg d1_me_mirror_casual2_7dl with dissolve:
+        alpha 0.5
+    "Doch dem Bild im Spiegel nach zu urteilen, blieb mein Alter in den frostigen Straßen der Stadt."
+    hide cg
+    show el normal pioneer far
+    with dspr
+    el "Ja. Lasst uns weitergehen, es gibt noch viele Sehenswürdigkeiten zu sehen."
+    "Jetzt sind wir im Gespräch."
+    "Es scheint, dass Elektronik-Technicker einem Menschen nur \"Hallo\" sagen müssen, um ihn schon fast als Freund zu betrachten. {w}So wie ich, der den Namen einer Person fünf Sekunden, nachdem er laut ausgesprochen wurde, vergisst."
+    show el normal pioneer with dspr
+    me "Schön, dich kennenzulernen, Lena!"
+    "rief ich über meine Schulter, als mich der unbändige Führer weiter weg zog."
+    "Lena zuckte zusammen und wurde, obwohl es mir fantastisch vorkam, noch mehr rot."
+    hide un with dissolve
+    with fade2
+    me "Welche anderen Sehenswürdigkeiten können Sie mir zeigen?"
+    el "Aber, aber..."
+    scene bg ext_dining_hall_away_day
+    with dissolve
+    "Wir näherten uns bereits einem neuen Objekt von Interesse. Wie wir anhand der gedrungenen Form des Gebäudes leicht erraten konnten, handelte es sich um eine Kantine."
+    el "Und hier haben wir..."
+    me "Ja, ja, das habe ich mir schon gedacht. Hier essen wir Bio-Lebensmittel."
+    if (counter_sl_7dl != 1):
+        "Der rothaarige Bandit war hier und reagierte auf die letzte Bemerkung mit einem verhaltenen Glucksen."
+    else:
+        "Auf der Veranda stand ein Mädchen mit roten Haaren, die zu zwei Pferdeschwänzen hochgesteckt waren. Sie nahm meinen flachen Witz gelassen hin und grinste sogar."
+    "Offensichtlich werden meine Eugene-Vaganovich-Witze eine gewisse Popularität haben."
+    scene bg ext_dining_hall_near_day
+    show el normal pioneer close at right
+    show dv normal pioneer2 far at left
+    with dspr
+    el "Und das..."
+    "Elektronik-Techniker schaltete auf ein Flüstern um, das nur ein Tauber nicht hören würde."
+    el "Unsere Alice. Sie hat immer schlechte Laune."
+    $ meet('dv','Alice')
+    "Feuer-Mädchen, Splatter-Mädchen...."
+    me "So wütend?"
+    el "Nein, sie ist nur irgendwie..."
+    stop music fadeout 3
+    stop ambience fadeout 3
+    el "Der Nachname ist Dvachevsky, aber versuchen Sie mal, ihn \"TwoChe\" zu nennen. ....."
+    pause(3)
+    play music music_list["awakening_power"] fadein 2
+    show dv angry pioneer2 far at left with dspr
+    dv "Was haben Sie gerade gesagt?"
+    show dv angry pioneer2
+    show el scared pioneer close
+    with dspr
+    "Alice sprang sofort von der Veranda und rannte in unsere Richtung."
+    el "Ähm. Okay, du kannst es von hier aus übernehmen!"
+    hide el with dissolve
+    me "Was?"
+    "Mit einem schmierigen Gesicht fragte ich in die leere Luft."
+    "Elektronik-Touchniker war weg, und aus irgendeinem Grund erstarrte ich und sah dem nahenden Untergang entgegen."
+    menu:
+        "Ihm nachlaufen":
+            $ alt_day1_el_followed = True
+            stop music fadeout 3
+            "Ich beschloss, dass es besser war, die Gänse nicht zu ärgern, also folgte ich Elektronik-Technik und war bald auf Augenhöhe mit ihm."
+            scene bg ext_warehouse_day_7dl
+            with dissolve
+            play ambience ambience_camp_center_day fadein 2
+            "Nach kurzem Nachdenken wandte er sich scharf in Richtung der Lagerhäuser....."
+            "...und sprang, ohne sie auch nur ein bisschen zu erreichen, direkt vom Weg ins dichte Gras."
+            "Ich kämpfte dagegen an, dass mir das Lachen verging, und versteckte mich neben ihm."
+            "Ohne sich umzudrehen, rannte Alice verzweifelt die Gasse hinunter und verschwand hinter dem Lagerhaus."
+            "Nachdem er einige Augenblicke gewartet hatte, um sich zu beruhigen, atmete der Elektronik-Techniker erleichtert aus und kletterte aus dem Gras."
+            show el smile pioneer with dspr
+            el "Ich glaube, wir sind fertig."
+            "Er sah ziemlich schlecht aus. Der Sprung ins Gras schien nicht ganz so zu verlaufen, wie er es geplant hatte."
+            el "Er glaubt, er weiß, wo ich zu finden bin. Er wird zum Club gehen und dort auf mich warten. Da gehe ich nicht hin.{w} Gefährlich!"
+            "Ich hatte schon geahnt, wie es sein würde, von Dwatschewskaja in einen Hinterhalt gelockt zu werden, also nickte ich verständnisvoll."
+            el "Wir werden bis zum Abendessen leben, und dann ist die Gefahr vorbei. {w}Nun, zumindest sollte sie das."
+            "Er betrachtete seine mit Grassaft befleckte Kleidung mit Abscheu."
+            el "Ich bin ganz schmutzig. Also gut, du gehst raus und ich werde mich waschen gehen. Ich sehe dich beim Abendessen."
+            stop ambience fadeout 2
+            hide el with dissolve
+            "Nachdem ich ein wenig nachgedacht hatte, ging ich in die Richtung, aus der ich die Gummiballschläge hören konnte."
+            "Sieht aus, als hätten sie da drinnen Fußball gespielt."
+        "Nichts tun.":
+            $ karma += 10
+            $ lp_dv += 1
+            show dv angry pioneer2 close at left with dspr
+            "Als sie sich mir näherte, warf sie mir einen besonders bösen Blick aus ihrem Arsenal zu."
+            dv "Wir sprechen uns später!"
+            if loki and (counter_sl_7dl != 1):
+                me "Holst du mir noch einen Eimer?"
+                $ karma -= 10
+                "Mit einem Lachen wich ich einer in der Luft flackernden Handfläche aus."
+                show dv rage pioneer2 close at left with dspr
+                "Sie spuckte wütend aus, drehte sich um und folgte Elektronik-Technik."
+            elif herc and (counter_sl_7dl != 1):
+                me "Hat dir das Reiten auf den Händen gefallen?"
+                $ karma += 10
+                "Ich war bereit, das vorlaute Mädchen zu Boden zu ringen, und ich glaube, sie hat diese Absicht in meinen Augen gelesen."
+                show dv rage pioneer2 close at left with dspr
+                "Sie spuckte wütend aus, drehte sich um und folgte Elektronik-Technik."
+            else:
+                me "Was ist mit mir? Ich bin ein Nichts."
+                if dr and (counter_sl_7dl != 1):
+                    "murmelte ich."
+                    "Nach dem Übergießen wollte ich mich gar nicht mehr mit dem Rotschopf anlegen."
+                else:
+                    "Ich zuckte mit den Schultern."
+                    "Die Streitereien anderer Leute gingen mich überhaupt nichts an."
+                    "Der Geste wurde ein Lächeln hinzugefügt.{w} Irgendwie schuldbewusst."
+                "Ohne mich einer Antwort zu würdigen, eilte Dvachevskaya hinter Elektronik-Technik her."
+            stop music fadeout 5
+            hide dv with dissolve
+            with fade2
+            th "Offenbar wird mich niemand mehr belästigen, und die Zeit bis zum Abendessen kann ich dem glückseligen Nichtstun widmen."
+            "Ich suchte mir willkürlich eine Richtung aus und ging in die Richtung, aus der die elastischen Tritte des Balls kamen - es war eindeutig ein Fußballspiel im Gange."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day1_soccer_d1:
+    scene bg ext_playground_day
+    with dissolve
+    play ambience ambience_soccer_play_background fadein 2
+    play music music_list["went_fishing_caught_a_girl"] fadein 2
+    "Einige Zeit später erreichte ich den gesuchten Ort und setzte mich auf eine der Bänke am Rande des Feldes und blickte nachdenklich auf das Feld."
+    "Das Spiel war in vollem Gange, und ich ertappte mich beim Zuschauen."
+    "Ich war früher gut im Umgang mit dem Ball, aber meine Prioritäten für den Sport lagen nie darin."
+    "Die Kinder wuselten auf dem Feld herum, aber selbst aus der sich ständig bewegenden Menge stach eines heraus - das schnellste, das unruhigste."
+    "Oh, ich habe die Rothaarige sofort erkannt."
+    if (counter_sl_7dl == 1):
+        "Ich verstehe das!"
+        "Ruhm hat sie nichts Böses tun lassen, aber sie muss ihre Energie rauslassen."
+    else:
+        "Sie kiffte, benahm sich daneben und ging mit gutem Gewissen zum Fußballspielen."
+    scene bg ext_playground_day with dissolve
+    "Ein Ball rollte unter meinen Füßen durch und ich nahm ihn auf den Fuß und warf ihn zurück."
+    play sound sfx_soccer_ball_kick
+    th "Ja, ja. Nicht mein bester Schuss."
+    show us laugh sport far with dissolve
+    us "He, du!"
+    "Das Mädchen rief."
+    if (counter_sl_7dl == 1):
+        "Ich glaube, Ruhm nannte sie Uljana."
+    else:
+        "Ich glaube, ihr Name war Uljana - es sei denn, Elektronik-Techniker hat mich angelogen."
+    $ meet('us','Uljana')
+    us "Lasst uns spielen gehen!"
+    "fragte ich mich."
+    th "Und warum eigentlich nicht?"
+    if (counter_sl_7dl == 0) and dr:
+        "Aber die neuen Uniformen sind schmutzig...."
+    else:
+        th "Andererseits ist das Spielen in Sandalen und warmen Hosen eine Art....."
+    me "Machen wir das ein andermal!"
+    show us dontlike sport with dspr
+    us "Du bist langweilig!"
+    "Mit einem letzten verbotenen Stempel kehrte sie zum Spiel zurück."
+    hide us with dissolve
+    "Ich stieg von der Bank ab und bemerkte zur Abwechslung die Drehscheiben, die genau dort standen."
+    scene bg ext_playground_day:
+        xalign 0.5 yalign 0.5 zoom 1.0
+        linear 2.0 zoom 1.5 xalign 0.55 yalign 0.55
+    with dissolve
+    "Es ist noch gar nicht so lange her, da war das Wort \"Vorkout\" en vogue und bezeichnete die trivialsten Dinge - die Liebe zum Hängen an einem Drehkreuz."
+    "Nachdem ich mir ein paar YouTube-Videos angeschaut hatte, begann ich sogar, zu meinem Tourniquet im Garten zu gehen, ließ es aber schnell wieder sein."
+    "Früher konnte ich einige Dinge tun! Ich muss sehen, was für einen Körper sie mir gegeben haben und ob er wenigstens ein Dutzend Klimmzüge schafft."
+    "Meine Finger, die an die Belastung nicht gewöhnt waren, wollten nicht richtig passen."
+    "Dann hat sich der Schwerpunkt verschoben."
+    "Schließlich sprang ich, mich selbst anschreiend, auf und hängte mich an die Stange, hielt den Rücken gerade und"
+    "Eins!"
+    "Zwei!"
+    "Drei!"
+    us "Vier! Fünf!"
+    with dissolve
+    "Hinter mir ertönte ein Refrain."
+    if herc:
+        "Erschrocken über diese Überraschung, machte ich trotzdem weiter, bis ich bei zehn Klimmzügen stehen blieb."
+        scene bg ext_playground_day at zentercenter
+        show us smile sport
+        with dissolve
+        us "Hey, ist das alles?"
+        me "Das ist alles, was ich brauche!"
+        me "Aber Sie können jederzeit auf das Zelt klettern und mich umstimmen!"
+        play sound sfx_7dl["eat_horn"] fadein 1
+        "Als sie merkte, dass ich nicht schwach war, wollte das Mädchen zum Spiel zurückkehren, wurde aber durch ein Signalhorn unterbrochen."
+    elif loki:
+        th "Fünfundzwanzig, winkend."
+        th "Oh, sieh an, du findest kostenlose Unterhaltung."
+        "Sofort ließ ich meine Hände los und sprang zu Boden."
+        me "Die Show ist vorbei."
+        "Ich habe mich verbeugt."
+        show us dontlike sport with dspr
+        us "Du bist faul, das ist es, was du bist."
+        if (counter_sl_7dl != 1):
+            me "Wenn du mich beschimpfst, werde ich es wieder verschütten!"
+        play sound sfx_7dl["eat_horn"] fadein 1
+        "Das Mädchen wollte noch etwas Beleidigendes sagen, wurde aber durch die \"Nimm einen Löffel, nimm Brot\"-Signale des Unsterblichen unterbrochen."
+    else:
+        play sound sfx_punch_medium
+        "Mit einem überraschten Ruck löste ich meine Hände und ließ mich auf den Boden fallen." with vpunch
+        us "Ooooh..."
+        "Die Fans, die sich unmerklich zurückgezogen hatten, waren enttäuscht."
+        scene bg ext_playground_day with flash
+        th "Es wird nicht lange dauern, bis Sie einen Herzinfarkt bekommen."
+        "Verärgert, dachte ich, als ich aufstand."
+        show us smile sport with dspr
+        us "Wirst du weiter hochziehen?"
+        me "Das werde ich nicht. Sie haben keine Tickets."
+        show us laugh sport with dspr
+        us "Du siehst nicht gerade wie ein Clown aus."
+        th "Kleine Infektion."
+        th "Man sollte meinen, dass es beim Glücklichsein um die Anzahl der Klimmzüge geht."
+        play sound sfx_7dl["eat_horn"] fadein 1
+        "Gerade als ich der Rothaarigen sagen wollte, was ich von ihr hielt und wohin sie gehen sollte, ertönte das Signalhorn."
+    show us grin sport with dspr
+    us "Lauft in die Kantine! Wer als Letzter geht, ist eine faule Tomate!"
+    hide us with dissolve
+    "Die Kinder drängelten und stürmten in den Speisesaal."
+    pause(1)
+    if alt_day1_el_followed:
+        th "Und Elektronik-Techniker ist immer noch nicht da."
+        th "Vielleicht kommt er gar nicht."
+        "Es ist wahr, was man sagt: Denk an die Sonne - da ist der Strahl."
+        "Ich wollte gerade gehen, als Elektronik-Techniker auf mich zustürmten."
+        show el smile pioneer with dspr
+        el "Ahh. Du hast gewartet. Oh, gut. Lasst uns zum Messezelt gehen, bevor wir alles aufessen!"
+        "Wir machten uns auf den Weg in den Speisesaal. Zum Glück wusste ich jetzt, wo er war."
+    else:
+        "Und ich ging gemächlich hinter ihnen her."
+    stop sound fadeout 3
+    stop ambience fadeout 6
+    with fade
+    return
+
+label alt_day1_supper:
+    scene bg ext_dining_hall_away_sunset with dissolve
+    "Nachdem wir den Weg zu den Waschbecken entlang geschlittert waren und uns die Hände mit Wasser gewaschen hatten, das so kalt war, dass es uns die Finger brach, betraten wir den Speisesaal."
+    play ambience ambience_dining_hall_full fadein 3
+    scene bg int_dining_hall_people_sunset_7dl with fade
+    "Na ja... Das Esszimmer ist genau wie ein Esszimmer."
+    "Lange Tische für zwölf Personen, die an den Wänden aufgereiht waren, und etwas kürzere Tische auf der anderen Seite des Ganges, damit die Bediensteten mit den Wagen aufstehen und den Tisch decken oder abräumen konnten."
+    "Fliesen auf dem Boden und an den Wänden, Stühle aus Edelstahl und Lautsprecher unter der Decke, falls es draußen regnet."
+    "An einer anderen Seite standen kleine Tische, offenbar für das Personal. An einem von ihnen konnte ich ein wohlgeformtes Mädchen in meinem Alter sehen."
+    show cs normal far at right with dissolve
+    dreamgirl "Ex."
+    th "Was?"
+    dreamgirl "Früheres Alter."
+    if dr:
+        th "Du nicht..."
+        dreamgirl "Habt ihr mich vermisst?"
+    else:
+        th "Wer zum Teufel sind Sie?"
+        dreamgirl "Deine Intuition, Kumpel."
+    "Als ich näher hinsah, erkannte ich sie als die Krankenschwester, die mich untersucht hatte."
+    th "Violetta, stimmt\'s?"
+    show cs smile far with dspr
+    "Viola nickte einladend."
+    show mi serious pioneer far at left with dissolve
+    "Auf dem Platz neben ihr saß ein sehr \"blaugrünes\" Mädchen."
+    show mi normal pioneer far with dspr
+    "Sie schenkte mir ein kurzes Lächeln, unterbrach meinen Blick und wandte sich wieder ihrem Teller zu."
+    th "Ich habe also nicht von ihr geträumt?!{b}Dasistgroßartig{/b}!"
+    th "Ich frage mich, wie dieses Lager über türkis gefärbte Haare denkt?"
+    hide cs
+    hide mi
+    with dissolve
+    show mt normal pioneer at cright with dissolve
+    mt "Semjon, steh nicht einfach so da, sonst verlierst du dein Abendessen."
+    "Ich erschauderte vor Überraschung."
+    "Der Berater schlich sich unbemerkt heran."
+    if dr and (counter_sl_7dl != 1):
+        "Olga musterte mich von Kopf bis Fuß, rückte meinen Kragen leicht zurecht und nickte zufrieden."
+        show mt smile pioneer at cright with dissolve
+        mt "So, jetzt siehst du wie ein anständiger Pionier aus."
+        if renpy.random.randint(1, 95) == 1:
+            dreamgirl "Pivoner."
+        else:
+            dreamgirl "Pionier."
+    show mt normal pioneer at left with move
+    mt "Okay, suchen wir Ihnen einen Platz.{w=0.5}{nw}"
+    show dv normal pioneer2 at right with dissolve
+    show mt angry pioneer with ease
+    extend " Dwatschewskaja, keine Bewegung!" with vpunch
+    "Beinahe hätte sie den rothaarigen Blitz aus der Luft geholt und sich auf das rechtmäßige Kartoffelpüree und das Kotelett gestürzt."
+    show dv surprise pioneer2 with dspr
+    dv "Was noch?"
+    mt "Was trägst du da?"
+    dv "Ähm... Die Form?"
+    if loki:
+        if (counter_sl_7dl != 1):
+            "Ich unterdrückte ein Schmunzeln - nach dem Vorfall am Eingang des Lagers hatte sich Alice umgezogen, aber auf ihre eigene Art und Weise."
+        "Ein aufgeknöpftes, am Bauch verknotetes Hemd, das das Fehlen aller unnötigen Kleidungsstücke darunter zeigt, eine am Handgelenk gebundene Pionierkrawatte."
+        "Das ist der Weg, den ein echter Pionier gehen sollte."
+        mt "Sofort in Form kommen!"
+        show dv grin pioneer2 with dspr
+        dv "Pfft... Wie du meinst."
+        "Sie zog gemächlich an dem Knoten ihres Hemdes...."
+        hide dv with dissolve
+        show mt normal pioneer with dspr
+        me "Dreh der Wand den Rücken zu, Zwiebelwehe!"
+        "Ich konnte es nicht ertragen."
+        me "Sonst verdirbst du das Abendessen für das halbe Lager."
+        dv "Was haben sie nicht gesehen..."
+        show dv normal pioneer at cright with dspr
+        "Alice befolgte meinen Rat und setzte sich, ihre Uniform zurechtrückend, auf die andere Seite des Ganges, wobei sie mir zwischendurch einen anzüglichen Blick zuwarf."
+        hide dv with dissolve
+    elif herc:
+        "Mein Lachen erregte die Aufmerksamkeit sowohl des Beraters als auch von Alice. Und wenn die Erstere, den lachenden Augen nach zu urteilen, das Spiel, das ich spielte, sehr gut verstand...."
+        "... Letztere haben die ganze Sache für bare Münze genommen."
+        show dv grin pioneer2 with dspr
+        "Sie verschränkte die Arme an den Seiten und streckte sich schamlos, um mit ihrem verknoteten Hemd zu betonen, was sie betonen wollte."
+        me "Ich glaube, jemand hat die Kantine mit einer Dorfdisco verwechselt...."
+        show dv shy pioneer2 with dspr
+        "Es klang wie ein Flüstern, aber aus irgendeinem Grund hörte es der halbe Speisesaal."
+        "Dvachevskaya brach aus..."
+        th "Wow, die weiß aber auch, was peinlich ist!"
+        hide dv with dissolve
+        "...und stürmte aus dem Speisesaal, wobei er mich zum zweiten Mal heute anfunkelte."
+        show mt normal pioneer with dspr
+        me "Ich hoffe, ich habe nicht zu viel gesagt."
+        show dv normal pioneer at right with dspr
+        "Alice kehrte eine halbe Minute später zurück, hatte ihre Uniform bereits aufgeräumt und sogar die Verklemmungen des Knotens teilweise geglättet."
+        "Sie warf mir einen äußerst unfreundlichen Blick zu und nahm ihren Platz ein."
+        hide dv with dissolve
+    else:
+        "Ich unterdrückte einen Glucksen. Es scheint, dass sich Alices Auffassung von Form radikal von der herkömmlichen unterscheidet."
+        "Ein extrem aufreizend getragenes Hemd, das nur durch einen Knoten knapp unter der Brust zusammengehalten wird, ein Krawattenarmband, das um sein Handgelenk gebunden ist, und zwei rothaarige Reißverschlussschwänze."
+        "Und was ist eigentlich so schlimm an der Form?"
+        "Das ist der Weg, den ein echter Pionier gehen sollte."
+        mt "Sofort in Form kommen!"
+        show dv grin pioneer2 with dspr
+        dv "Pfft... Wie du meinst."
+        "Sie zog gemächlich an dem Knoten ihres Hemdes...."
+        show mt angry pioneer with dspr
+        mt "Alice!"
+        dv "Was noch?!"
+        "Olga Dmitrijewna überlegte einen Moment und winkte mit der Hand."
+        show mt normal pioneer with dspr
+        show dv normal pioneer2 with dspr
+        mt "Okay, machen Sie das so."
+        hide dv with dissolve
+    show mt normal pioneer with dspr
+    mt "Okay, jetzt du."
+    "Die Betreuerin führte mich zu ein paar Tischen, die anscheinend zu meiner Gruppe gehörten, und deutete nach kurzem Überlegen mit dem Finger auf einen freien Platz neben der zierlichen Frau."
+    mt "Hier werden Sie sich hinsetzen."
+    me "Olga Dmitrijewna, ich habe eine dumme Frage."
+    "Ich wandte mich an die Beraterin und merkte, dass es sehr belastend war, neben dem Kleinen zu sitzen."
+    "Und die Empfehlungen des freundlichen Dr. Viola hätten befolgt werden müssen."
+    mt "Alle dummen Fragen kommen nach dem Essen. Setzen Sie sich und essen Sie."
+    "Dabei antwortete die Beraterin, wo sie all diese Empfehlungen gesehen hatte."
+    "Offensichtlich hatte ich mein Kontingent an dummen Dingen für heute ausgeschöpft. Es gab nichts zu tun, also musste ich mich hinsetzen."
+    "Denn wen interessiert es schon, neben wem ich sitze, wenn mir der Inhalt meines Tellers wichtiger ist als meine Umgebung."
+    hide mt with dissolve
+    show us smile sport with dissolve
+    us "Hey, psst!"
+    me "Was wollen Sie?"
+    us "Warum hast du nicht mit uns gespielt?"
+    if (counter_sl_7dl == 0) and dr:
+        me "Wollte seine Uniform nicht schmutzig machen."
+    else:
+        me "Es war die falsche Kleidung."
+    us "Was willst du tun, mit Klamotten spielen?"
+    mt "Uljana, geh ihm aus dem Weg."
+    $ meet('us','Uljana')
+    "Ein Berater mahnte."
+    us "Also gut, setz dich hin und iss."
+    show us grin sport with dspr
+    hide us with dissolve
+    "Sie zwinkerte mir zu und ich wandte mich wieder meinem Teller zu."
+    "Und stellte fest, dass das Kotelett weg war!"
+    "Ich drehte mich wieder zu ihr um, wobei ich meinem bereits bestehenden Ruf als Weichei Rechnung trug."
+    show us smile sport with dissolve
+    us "In einer großen Familie schnippt man nicht mit dem Schnabel."
+    me "Du kleiner..."
+    menu:
+        "Verlangen Sie ein Kotelett":
+            $ karma += 10
+            $ lp_us += 1
+            "Ich sah sie bedrohlich an und hielt ihr meinen Teller hin."
+            if loki:
+                me "Ulechka, mein Sonnenschein. Lass uns keine Dummheiten machen und die Koteletts zu ihren Besitzern zurückbringen, ja?"
+                me "Oder ich setze dir dieses Kartoffelpüree auf den Kopf!"
+            elif herc:
+                me "Kleines, sei nicht stur und gib zurück, was du genommen hast."
+            else:
+                me "Uljana. Ein Kotelett. {w=.6}LIVE."
+            us "Ich habe es nicht, sehen Sie selbst!"
+            "Sie zeigte auf ihren Teller, auf dem weniger als die Hälfte des Kartoffelpürees und natürlich keine Schnitzel lagen."
+            me "Du hast... gegessen..."
+            show us normal sport with dspr
+            us "Okay, stopp."
+        "Nimm den Teller weg":
+            $ karma -= 10
+            "Eine schnelle Bewegung meiner Hand und ich habe einen weiteren Teller."
+            show us dontlike sport with dspr
+            us "He! Gib es zurück! Das ist meins!"
+            me "Muss ich Sie an die Familie und den Schnabel erinnern?"
+            us "Nun gut."
+            "Sie verschränkte die Arme vor der Brust."
+            us "Ich wünsche Ihnen viel Kartoffelpüree. Da ist sowieso kein Kotelett drin."
+            me "Wie könnte man nicht?!"
+            "Ich steckte meine Nase in meinen Teller, um zu sehen, ob Uljankas Worte wahr waren."
+            "Und tatsächlich - es gab kein Kotelett."
+            me "Weißt du nicht, dass es nicht nur unhygienisch, sondern auch gefährlich ist, die Schnitzel anderer Leute zu essen?"
+            show us surp1 sport with dspr
+            us "Was?"
+            me "Ich haue dir eins aufs Ohr, das ist es!"
+            show us smile sport with dspr
+            us "Keine Sorge, wir werden etwas organisieren."
+        "Ignorieren Sie":
+            $ lp_sl += 1
+            $ karma += 10
+            "Ich ignorierte die Provokation stoisch und begann, das Kartoffelpüree zu essen."
+            show us sad sport with dspr
+            us "Und so..."
+            "Uljana schien sich über ihr Fehlen zu ärgern."
+            show us normal sport with dspr
+            us "Keine Sorge, wir werden etwas organisieren."
+    hide us with moveoutright
+    "Sie schnappte sich sofort meinen Teller und verschwand."
+    "Das ist großartig. Ich habe sowohl Fleisch als auch Beilagen in einer Mahlzeit verloren."
+    dreamgirl "Hat dir schon mal jemand gesagt, dass du ein Arsch bist? Das Leben ist Schmerz."
+    show us grin sport with dissolve
+    "Ein paar Minuten später kam Uljanka mit einer neuen Ladung heißer Sachen zurück."
+    us "Fragen Sie ruhig!"
+    "Sie stellte mir das Essen vor die Nase."
+    us "Und denkt an meine Freundlichkeit!"
+    hide us with dissolve
+    me "Herzlichen Dank!"
+    "Ich bedankte mich herzlich bei ihm und stellte fest, dass das Mädchen bereits woanders hingegangen war."
+    th "Und sie ist gar nicht so übel!"
+    th "Ja. Das Wichtigste ist jetzt die richtige und gesunde Ernährung."
+    "Die Tatsache, dass ich seit dem Morgen nichts mehr gegessen hatte, machte sich bemerkbar, und ich stocherte seelenruhig mit der Gabel in dem Schnitzel herum, um aus den Leckereien auf meinem Teller meinen Lieblingsbrei aus Fleisch, Kartoffelpüree und Erbsen zu machen."
+    scene cg d1_food_normal with dissolve
+    pause(1)
+    "Ich wollte gerade in das wohlschmeckende Stück Fleisch beißen, als ich plötzlich ein Rühren auf meinem Teller bemerkte."
+    scene cg d1_food_skolop with dissolve
+    play sound sfx_dropped_chair
+    "Als ich meinen Blick auf den Teller richtete, sprang ich zurück und schleuderte meinen Stuhl gegen die Wand."
+    me "Heilige Scheiße, es lebt?!"
+    play music music_list["awakening_power"] fadein 2
+    play sound sfx_suspence_bang
+    scene cg d1_food_skolop:
+        zoom 1.0 xalign 0.5 yalign 0.5
+        linear 1.0 xalign 0.6 yalign 0.8 zoom 2.0
+    pause(1)
+    th "Ist das eine Scolopendra?! Eine außerirdische Larve?! Eine Art außerirdischer Bastard?"
+    play sound sfx_body_bump
+    "Mit einem Schrei ließ ich mich auf den gefliesten Boden fallen."
+    scene bg int_dining_hall_people_sunset_7dl with fade
+    "Das unbekannte Wesen drehte sich gemächlich um, wählte eine Richtung, beschleunigte noch mehr und fuhr weiter..."
+    "...für mich!"
+    me ""
+    play sound sfx_chair_fall
+    with vpunch
+    "Mit einem lauten Schrei rannte ich los, war nur noch auf der Flucht und hatte sogar Erfolg, bis ich mit dem Hinterkopf an der Wand landete."
+    "Und die außerirdische Abscheulichkeit bewegte sich zielstrebig hinter mir!"
+    play sound sfx_punch_washstand
+    with vpunch
+    "Witze sind Witze, aber das war zu viel für meinen hungrigen Geist."
+    "{i}Und jeder Mensch soll nach seinen Sünden belohnt werden!{/i}"
+    me "{b}ULIANAAAAAAA!!!{/b}"
+    stop ambience fadeout 1
+    stop music fadeout 2
+    pause(1)
+    "In der plötzlichen Stille, die im Esszimmer herrschte, klang mein Schrei besonders laut."
+    "Und dem zufriedenen Kichern nach zu urteilen, das von der Tür herüberkam, erreichte es die Ohren des Empfängers."
+    show us laugh sport with dspr
+    play music music_7dl["genki"]
+    "Aber als sie meinen Gesichtsausdruck sah, musste sie laut lachen!"
+    us "Ah-ha-ha-ha-ha-ha-ha-ha!"
+    hide us with easeoutright
+    "Der rothaarige Meteor stürmte durch die Türen und hatte zu Recht einen Vorsprung."
+    if (counter_sl_7dl == 1) and (lp_sl >= 3):
+        "Plötzlich spürte ich die Handfläche von jemandem auf meiner Schulter, und die Stimme, die ich die ganze Zeit vor Wut nur kaum hörbar gemurmelt hatte, brach in verständliche Worte aus."
+        menu:
+            "Er wird verschwinden!":
+                "Mit einer Bewegung warf ich meinen Arm von der Schulter und stürzte nach vorne."
+                "Ein bisschen Unfug darf nicht ungestraft bleiben!"
+                $ karma -= 10
+            "Was noch?!":
+                $ lp_sl += 1
+                $ counter_sl_7dl = 2
+                "Ich drehte mich ruckartig um."
+                "Рядом со мной стояла Ruhm, а чуть поодаль — и все остальные девочки."
+                "Ruhm выговаривала мне что-то воркующим голосом, но уловить я успел только самое окончание."
+                show sl normal pioneer with dissolve
+                sl "...внимания! {w}Она всех так злит! Проверяет."
+                me "Und ich?"
+                "Ich hatte Mühe zu sprechen."
+                show sl smile pioneer with dspr
+                sl "Wie sind Sie anders?"
+                "Sie zog ein Stück Papier aus ihrer Tasche, fing damit geschickt einen Tausendfüßler ein und schickte ihn aus dem Fenster."
+                sl "Setzt euch, ich bringe etwas zu essen."
+                me "Warum sollten Sie das tun?"
+                "Ich starrte sie misstrauisch an."
+                show sl laugh pioneer with dspr
+                sl "Du stellst so viele Fragen! Hast du keinen Hunger?"
+                me "Hungrig."
+                sl "Hier. {w}Setz dich hin, setz dich hin."
+                hide sl with dissolve
+                "Sie huschte in die Küche und ließ mich allein."
+                "Все наши к тому моменту уже успели закончить трапезу, разве что рыжая Alice никуда не спешила."
+                if dr:
+                    show dv smile pioneer2 with dissolve
+                else:
+                    show dv smile pioneer with dissolve
+                dv "Glauben Sie, dass er etwas ausrutschen wird?"
+                me "Das ist schwer zu sagen."
+                dv "Und wenn er es tut, was wird es sein?"
+                me "Lass mich in Ruhe, ich habe die Nase voll von dir."
+                if dr:
+                    show dv laugh pioneer2 with dissolve
+                else:
+                    show dv laugh pioneer with dissolve
+                dv "Sieh ihn dir an, er ist so zart!"
+                "Alice шутливо отсалютовала мне вилкой и поднялась."
+                dv "Genießen Sie dort etwas, behalten Sie den Teller im Auge."
+                hide dv with dissolve
+                "Nachdem die Rothaarige auf diese Weise Verwirrung in meiner Seele gestiftet hatte, entfernte sie sich."
+                me "Ach, komm schon!"
+                "Ich habe geflucht."
+                sl "Stimmt etwas nicht?"
+                "Появившаяся с кухни Ruhm поставила передо мной тарелку."
+                me "Да нет..."
+                "Ich starrte auf meinen Teller hinunter."
+                me "Wow! Warum werde ich so geehrt?"
+                sl "Humanitäre Hilfe für die Hungernden! Aber nur zum ersten Mal!"
+                "Neben Kartoffelpüree und Erbsen befanden sich drei ganze Schnitzel auf dem Teller!"
+                show sl happy pioneer with dspr
+                sl "Und keine Tausendfüßler, wohlgemerkt!"
+                me "Сейчас поглядим..."
+                "Ich brummte und drehte das Kotelett um."
+                show sl laugh pioneer with dspr
+                sl "Wir könnten auch in den Erbsen suchen! Und im Kartoffelpüree, falls es das Hauptquartier ist."
+                "Das Mädchen lachte."
+                sl "Kauen Sie ruhig, ich räume auf."
+                hide sl with fade
+                "И пока я сидел за столом и лопал весьма вкусную стряпню, Ruhm успела сбегать куда-то к дверям, достать оттуда тряпку и ведро, после чего ничтоже сумняшеся взялась за сбор тарелок и котлет."
+                "Sie ging in die Hocke, wischte mit einem Lappen den Boden und überprüfte die Platten, von denen übrigens keine gesprungen oder zerbrochen war."
+                "Sie tat es so schnell und mit Vergnügen, dass es mir peinlich war:"
+                me "Да я и сам бы мог..."
+                sl "Na los!"
+                "Ruhm откинула с раскрасневшегося лица локон за ухо и подмигнула мне."
+                sl "Ist Ihnen mehr nach Putzen als nach Essen zumute?"
+                me "Was ist mit Ihnen?"
+                sl "Ich habe bereits zu Abend gegessen."
+                "Das Mädchen sah so zufrieden aus, als hätte sie sich nicht freiwillig zum Putzen gemeldet, sondern mindestens eine Million im Lotto gewonnen."
+                me "Э... Ich danke Ihnen."
+                sl "Sie essen, essen."
+                "Als sie mit dem Aufräumen fertig war, lächelte sie mich an und ging nach draußen."
+                "Zu diesem Zeitpunkt hatte ich es nicht einmal geschafft, eine halbe Portion zu verzehren."
+                dreamgirl "Ja, du solltest auf jeden Fall in der Nähe dieses süßen Mädchens bleiben."
+                dreamgirl "Sie werden sicher nicht hungrig bleiben!"
+                "Ich stimmte diesem Gedanken zu und verdiente mir einen Löffel voll."
+    stop music fadeout 4
+    stop ambience fadeout 6
+    with fade
+    return
